@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@import "material-symbols/outlined.css";
+
+@theme {
+  --font-sans: var(--font-manrope), "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --color-canvas: #F3F5F9;
+  --color-surface: #FFFFFF;
+  --color-sunken: #F7F8FB;
+  --color-surface-sunken: #F7F8FB;
+  --color-line: #E6E9F0;
+  --color-border-subtle: #E6E9F0;
+  --color-control: #8C95A8;
+  --color-border-control: #8C95A8;
+  --color-ink-900: #0F1729;
+  --color-ink-700: #3B4559;
+  --color-ink-600: #566075;
+  --color-ink-500: #6B7488;
+  --color-ink-400: #98A0B3;
+
+  --color-primary-50: #EEF3FF;
+  --color-primary-100: #DCE6FF;
+  --color-primary-200: #BCD0FF;
+  --color-primary-600: #2457E6;
+  --color-primary-700: #1B45C2;
+  --color-primary-800: #17368F;
+  --color-primary-900: #10245F;
+  --color-on-primary: #FFFFFF;
+
+  --color-pos: #1FA463;   --color-pos-text: #0B7A47;   --color-pos-tint: #E5F6EC;
+  --color-neu: #8A94A8;   --color-neu-text: #4A5568;   --color-neu-tint: #EAEEF4;
+  --color-neg: #E5484D;   --color-neg-text: #C2262E;   --color-neg-tint: #FDECEC;
+  --color-warn: #F59E0B;  --color-warn-text: #9A5B00;  --color-warn-tint: #FFF3DC;
+
+  /* Freshness indicators on navy card */
+  --color-fresh-ok: #7EE0A9;
+  --color-fresh-warn: #FFD27A;
+  --color-fresh-err: #FF9A9E;
+
+  --color-src-news: #2457E6;
+  --color-src-x: #1B2130;
+  --color-src-instagram: #C2308C;
+  --color-src-threads: #7440F5;
+
+  --radius-xs: 6px;  --radius-sm: 10px;  --radius-md: 14px;
+  --radius-lg: 20px; --radius-xl: 28px;  --radius-full: 9999px;
+
+  --shadow-card: 0 1px 2px rgb(15 23 41 / .04), 0 2px 8px -2px rgb(15 23 41 / .04);
+  --shadow-raised: 0 4px 12px -2px rgb(15 23 41 / .08);
+  --shadow-pop: 0 12px 32px -8px rgb(15 23 41 / .16), 0 2px 6px rgb(15 23 41 / .06);
+  --shadow-drawer: -16px 0 48px -12px rgb(15 23 41 / .22);
+  --shadow-modal: 0 24px 64px -16px rgb(15 23 41 / .30);
+
+  --text-xs: 12px;  --text-xs--line-height: 16px;
+  --text-sm: 13px;  --text-sm--line-height: 20px;
+  --text-base: 14px; --text-base--line-height: 22px;
+  --text-md: 16px;  --text-md--line-height: 24px;
+  --text-title-lg: 20px; --text-title-lg--line-height: 28px;
+  --text-title-xl: 24px; --text-title-xl--line-height: 32px;
+  --text-kpi-md: 28px; --text-kpi-md--line-height: 36px;
+  --text-kpi-lg: 36px; --text-kpi-lg--line-height: 44px;
+
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+
+  --z-filter-bar: 20;
+  --z-sidebar-mobile: 30;
+  --z-scrim: 40;
+  --z-panel-modal: 50;
+  --z-toast: 60;
+  --z-tooltip: 70;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 152px;
+    overflow-x: hidden;
+  }
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Skip to content link per DESIGN.md 10.1 */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  background-color: var(--color-primary-600);
+  color: var(--color-surface);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top var(--duration-fast) var(--ease-out);
+}
+.skip-link:focus {
+  top: 1rem;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-surface), 0 0 0 4px var(--color-primary-600);
+}
+
+/* Keyboard focus ring per DESIGN.md 3.5 */
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-surface), 0 0 0 4px var(--color-primary-600);
+}
