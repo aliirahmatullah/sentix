@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masuk (Galat) - Pantau Media</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+          },
+          colors: {
+            canvas: '#F3F5F9',
+            surface: '#FFFFFF',
+            sunken: '#F7F8FB',
+            line: '#E6E9F0',
+            control: '#8C95A8',
+            'ink-900': '#0F1729',
+            'ink-700': '#3B4559',
+            'ink-600': '#566075',
+            'ink-500': '#6B7488',
+            'primary-50': '#EEF3FF',
+            'primary-600': '#2457E6',
+            'primary-700': '#1B45C2',
+            'neg': '#E5484D',
+            'neg-text': '#C2262E',
+            'neg-tint': '#FDECEC',
+          },
+          borderRadius: {
+            'sm': '10px',
+            'xl': '28px',
+          },
+          boxShadow: {
+            'card': '0 1px 2px rgb(15 23 41 / 0.04), 0 2px 8px -2px rgb(15 23 41 / 0.04)',
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #F3F5F9;
+      color: #0F1729;
+    }
+  </style>
+<meta content="web_blank" name="shell-type"/></head>
+<body class="min-h-screen bg-[#F3F5F9] flex flex-col items-center justify-center p-6 selection:bg-[#EEF3FF] selection:text-[#2457E6]">
+<!-- Main Container -->
+<main class="w-full max-w-[420px] flex flex-col items-center"><div class="flex flex-col w-full items-center">
+<div class="w-full bg-surface rounded-xl p-[40px] shadow-card flex flex-col">
+<!-- Header Identitas Brand -->
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center text-surface shrink-0">
+<span class="material-symbols-outlined text-[24px]">radar</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-base-medium font-bold text-ink-900 leading-tight">Pantau Media</span>
+<span class="font-label-xs text-ink-600 leading-normal">Platform Monitoring &amp; OSINT</span>
+</div>
+</div>
+<!-- Judul & Deskripsi -->
+<h1 class="font-headline-xl text-ink-900 mt-space-xl tracking-[-0.01em]">Verifikasi dua langkah</h1>
+<p class="font-body-base text-ink-600 mt-space-sm mb-[28px]">
+      Masukkan kode 6 digit dari aplikasi autentikator Anda.
+    </p>
+<!-- 6-Digit OTP Field Container (Varian Galat) -->
+<div class="flex items-center justify-between gap-space-xs w-full" id="otp-container">
+<input aria-label="Digit 1" autofocus="" class="w-[48px] h-[56px] rounded-sm bg-surface text-ink-900 font-headline-xl text-center tabular-nums transition-all outline-none shadow-[0_0_0_2px_#FFFFFF,0_0_0_4px_#E5484D] border-0" data-index="0" inputmode="numeric" maxlength="1" type="text"/>
+<input aria-label="Digit 2" class="w-[48px] h-[56px] rounded-sm bg-surface text-ink-900 font-headline-xl text-center tabular-nums transition-all outline-none shadow-[0_0_0_1.5px_#E5484D] border-0 focus:shadow-[0_0_0_2px_#FFFFFF,0_0_0_4px_#E5484D]" data-index="1" inputmode="numeric" maxlength="1" type="text"/>
+<input aria-label="Digit 3" class="w-[48px] h-[56px] rounded-sm bg-surface text-ink-900 font-headline-xl text-center tabular-nums transition-all outline-none shadow-[0_0_0_1.5px_#E5484D] border-0 focus:shadow-[0_0_0_2px_#FFFFFF,0_0_0_4px_#E5484D]" data-index="2" inputmode="numeric" maxlength="1" type="text"/>
+<input aria-label="Digit 4" class="w-[48px] h-[56px] rounded-sm bg-surface text-ink-900 font-headline-xl text-center tabular-nums transition-all outline-none shadow-[0_0_0_1.5px_#E5484D] border-0 focus:shadow-[0_0_0_2px_#FFFFFF,0_0_0_4px_#E5484D]" data-index="3" inputmode="numeric" maxlength="1" type="text"/>
+<input aria-label="Digit 5" class="w-[48px] h-[56px] rounded-sm bg-surface text-ink-900 font-headline-xl text-center tabular-nums transition-all outline-none shadow-[0_0_0_1.5px_#E5484D] border-0 focus:shadow-[0_0_0_2px_#FFFFFF,0_0_0_4px_#E5484D]" data-index="4" inputmode="numeric" maxlength="1" type="text"/>
+<input aria-label="Digit 6" class="w-[48px] h-[56px] rounded-sm bg-surface text-ink-900 font-headline-xl text-center tabular-nums transition-all outline-none shadow-[0_0_0_1.5px_#E5484D] border-0 focus:shadow-[0_0_0_2px_#FFFFFF,0_0_0_4px_#E5484D]" data-index="5" inputmode="numeric" maxlength="1" type="text"/>
+</div>
+<!-- Pesan Galat Status Inline -->
+<div class="flex items-start gap-space-xs mt-space-md text-neg-text" role="alert">
+<span class="material-symbols-outlined text-[18px] shrink-0 translate-y-[1px]" style="font-variation-settings: 'FILL' 1;">error</span>
+<span class="font-body-sm text-neg-text leading-tight">Kode tidak cocok. Periksa jam pada perangkat dan coba lagi.</span>
+</div>
+<!-- Navigasi Alternatif -->
+<div class="w-full flex justify-center mt-[20px]">
+<button class="font-body-base-medium text-primary-600 hover:text-primary-700 hover:underline cursor-pointer bg-transparent border-0 p-0 focus:outline-none focus:underline" type="button">
+        Gunakan perangkat lain
+      </button>
+</div>
+</div>
+<!-- Catatan Kepatuhan Keamanan Jaringan Luar Kartu -->
+<p class="font-label-xs text-ink-500 text-center mt-space-lg select-none">
+    Akses hanya melalui jaringan instansi (VPN/LAN)
+  </p>
+<script>
+    (function() {
+      const inputs = Array.from(document.querySelectorAll('#otp-container input'));
+      
+      inputs.forEach((input, idx) => {
+        input.addEventListener('focus', () => {
+          inputs.forEach((el, i) => {
+            if (i === idx) {
+              el.classList.remove('shadow-[0_0_0_1.5px_#E5484D]');
+              el.classList.add('shadow-[0_0_0_2px_#FFFFFF,0_0_0_4px_#E5484D]');
+            } else {
+              el.classList.remove('shadow-[0_0_0_2px_#FFFFFF,0_0_0_4px_#E5484D]');
+              el.classList.add('shadow-[0_0_0_1.5px_#E5484D]');
+            }
+          });
+        });
+
+        input.addEventListener('input', (e) => {
+          const val = e.target.value.replace(/[^0-9]/g, '');
+          e.target.value = val ? val[0] : '';
+          
+          if (val && idx < inputs.length - 1) {
+            inputs[idx + 1].focus();
+          }
+        });
+
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Backspace' && !input.value && idx > 0) {
+            inputs[idx - 1].focus();
+          }
+        });
+
+        input.addEventListener('paste', (e) => {
+          e.preventDefault();
+          const pasteData = (e.clipboardData || window.clipboardData).getData('text').replace(/[^0-9]/g, '').slice(0, 6);
+          if (!pasteData) return;
+          pasteData.split('').forEach((char, i) => {
+            if (inputs[i]) {
+              inputs[i].value = char;
+            }
+          });
+          const targetIndex = Math.min(pasteData.length, inputs.length - 1);
+          inputs[targetIndex].focus();
+        });
+      });
+    })();
+  </script>
+</div></main>
+</body></html>

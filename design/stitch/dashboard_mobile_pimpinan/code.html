@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "ink-500": "#6B7488", "surface-dim": "#d2d9f3", "outline": "#747686", "on-secondary": "#ffffff", "ink-700": "#3B4559", "primary-fixed-dim": "#b7c4ff", "tertiary": "#8b2d00", "surface-container-high": "#e1e8ff", "surface-container-low": "#f2f3ff", "outline-variant": "#c4c5d8", "on-background": "#131b2d", "on-primary-fixed-variant": "#0039b3", "tertiary-fixed-dim": "#ffb59a", "on-error": "#ffffff", "ink-600": "#566075", "tertiary-fixed": "#ffdbcf", "error-container": "#ffdad6", "border-control": "#8C95A8", "primary-600": "#2457E6", "surface-sunken": "#F7F8FB", "surface-container": "#e9edff", "on-secondary-fixed-variant": "#3d475b", "on-error-container": "#93000a", "on-tertiary-container": "#ffdbcf", "surface-container-highest": "#dbe2fb", "neg-tint": "#FDECEC", "on-tertiary-fixed-variant": "#802900", "on-secondary-fixed": "#111c2e", "secondary": "#545f74", "inverse-primary": "#b7c4ff", "on-surface-variant": "#434655", "on-primary-container": "#dce1ff", "border-subtle": "#E6E9F0", "on-primary": "#ffffff", "surface-variant": "#dbe2fb", "primary": "#003ec1", "on-primary-fixed": "#001551", "surface-tint": "#1850df", "inverse-on-surface": "#edf0ff", "ink-900": "#0F1729", "primary-container": "#2457e6", "surface": "#FFFFFF", "surface-container-lowest": "#ffffff", "secondary-container": "#d8e2fc", "tertiary-container": "#b33d00", "on-tertiary-fixed": "#380d00", "secondary-fixed-dim": "#bcc6df", "on-surface": "#131b2d", "on-secondary-container": "#5a647a", "error": "#ba1a1a", "neg-text": "#C2262E", "canvas": "#F3F5F9", "primary-fixed": "#dce1ff", "surface-bright": "#faf8ff", "primary-700": "#1B45C2", "secondary-fixed": "#d8e2fc", "background": "#faf8ff", "inverse-surface": "#283043", "neg": "#E5484D", "on-tertiary": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "0.75rem", "space-lg": "1rem", "space-xl": "1.5rem", "margin": "1rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "margin-desktop": "2rem" }, fontFamily: { "body-base": ["Manrope"], "label-xs-bold": ["Manrope"], "title-md": ["Manrope"], "body-sm": ["Manrope"], "headline-xl-mobile": ["Manrope"], "label-xs": ["Manrope"], "body-base-medium": ["Manrope"], "headline-xl": ["Manrope"] }, fontSize: { "body-base": ["14px", { lineHeight: "22px", letterSpacing: "0", fontWeight: "400" }], "label-xs-bold": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "700" }], "title-md": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.005em", fontWeight: "500" }], "headline-xl-mobile": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-xs": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "500" }], "body-base-medium": ["14px", { lineHeight: "22px", letterSpacing: "0", fontWeight: "500" }], "headline-xl": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{background-color:#F3F5F9;overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-canvas text-on-surface font-body-base antialiased flex flex-col items-center min-h-screen"><div class="w-full max-w-[390px] flex flex-col min-h-screen relative bg-canvas"><header class="fixed top-0 w-full max-w-[390px] z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,23,41,0.04)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center -ml-space-xs text-ink-700 hover:text-ink-900 active:scale-95 transition-transform"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FFF3DC] text-[#9A5B00]"><span class="material-symbols-outlined text-[15px]">schedule</span><span class="font-label-xs-bold text-label-xs-bold leading-none tracking-normal">Terlambat · 09:42</span></div></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-xs-bold text-label-xs-bold tracking-tight shadow-[0_1px_4px_rgba(0,62,193,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px] hidden">person</span><span>AS</span></div></div></div></header><main class="flex-1 flex flex-col w-full pt-14 pb-20 bg-canvas"><div class="flex flex-col w-full px-margin pb-6 gap-space-lg select-none">
+<!-- Header Judul & Kontrol Filter Mobile -->
+<div class="flex flex-col gap-space-md pt-2">
+<div class="flex items-baseline justify-between">
+<div class="flex flex-col">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-ink-900 tracking-tight">Dashboard</h1>
+<p class="font-label-xs text-label-xs text-ink-600">6–12 Nov 2026</p>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-sunken shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#1FA463] animate-pulse"></span>
+<span class="font-label-xs-bold text-label-xs-bold text-ink-700">WIB Aktif</span>
+</div>
+</div>
+<!-- Kontrol Filter & Segmented Control -->
+<div class="flex items-center gap-2">
+<div aria-label="Periode" class="flex-1 flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5" role="tablist">
+<button class="px-3 py-1.5 rounded-full font-label-xs text-label-xs whitespace-nowrap bg-surface text-ink-700 hover:bg-surface-sunken shadow-sm transition-colors" type="button">
+          Hari ini
+        </button>
+<button class="px-3 py-1.5 rounded-full font-label-xs-bold text-label-xs-bold whitespace-nowrap bg-primary-600 text-on-primary shadow-sm transition-colors" type="button">
+          7 hari
+        </button>
+<button class="px-3 py-1.5 rounded-full font-label-xs text-label-xs whitespace-nowrap bg-surface text-ink-700 hover:bg-surface-sunken shadow-sm transition-colors" type="button">
+          30 hari
+        </button>
+<button class="px-3 py-1.5 rounded-full font-label-xs text-label-xs whitespace-nowrap bg-surface text-ink-700 hover:bg-surface-sunken shadow-sm transition-colors" type="button">
+          Kustom
+        </button>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-[10px] bg-surface text-ink-900 font-label-xs-bold text-label-xs-bold shadow-sm active:scale-95 transition-transform flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px] text-ink-700">tune</span>
+<span>Filter</span>
+<span class="flex items-center justify-center w-4 h-4 rounded-full bg-primary-600 text-[10px] text-on-primary font-bold">2</span>
+</button>
+</div>
+</div>
+<!-- 1. KPI Grid 2 x 2 -->
+<section aria-label="Indikator Kinerja Utama" class="grid grid-cols-2 gap-space-sm">
+<!-- Kartu 1: Total Konten -->
+<div class="flex flex-col justify-between p-space-md bg-surface rounded-[20px] shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-label-xs text-label-xs text-ink-600">Total konten</span>
+<span class="material-symbols-outlined text-[18px] text-ink-500">feed</span>
+</div>
+<div class="my-2">
+<div class="text-[24px] font-bold leading-none text-ink-900">12.480</div>
+</div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-md bg-[#EAEEF4] text-[#1B2130] font-label-xs-bold text-[11px] leading-tight">
+          ↑ 4,9%
+        </span>
+<span class="font-label-xs text-[11px] text-ink-500">vs 11.902</span>
+</div>
+</div>
+<!-- Kartu 2: Sentimen Positif -->
+<div class="flex flex-col justify-between p-space-md bg-surface rounded-[20px] shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-label-xs text-label-xs text-ink-600">Sentimen positif</span>
+<span class="text-[18px]">☺</span>
+</div>
+<div class="my-2 flex items-baseline gap-1">
+<div class="text-[24px] font-bold leading-none text-[#1FA463]">38%</div>
+</div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-md bg-[#E8F6EE] text-[#137A47] font-label-xs-bold text-[11px] leading-tight">
+          ↑ 2,1 poin
+        </span>
+<span class="font-label-xs text-[11px] text-ink-500">4.742 konten</span>
+</div>
+</div>
+<!-- Kartu 3: Sentimen Negatif -->
+<div class="flex flex-col justify-between p-space-md bg-surface rounded-[20px] shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-label-xs text-label-xs text-ink-600">Sentimen negatif</span>
+<span class="text-[18px]">☹</span>
+</div>
+<div class="my-2 flex items-baseline gap-1">
+<div class="text-[24px] font-bold leading-none text-neg">21%</div>
+</div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-md bg-neg-tint text-neg-text font-label-xs-bold text-[11px] leading-tight">
+          ↓ 1,3 poin
+        </span>
+<span class="font-label-xs text-[11px] text-ink-500">2.620 konten</span>
+</div>
+</div>
+<!-- Kartu 4: Aktor Teratas -->
+<div class="flex flex-col justify-between p-space-md bg-surface rounded-[20px] shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-label-xs text-label-xs text-ink-600">Aktor teratas</span>
+<div class="w-5 h-5 rounded-full bg-primary-fixed flex items-center justify-center text-primary-600">
+<span class="material-symbols-outlined text-[13px]">person</span>
+</div>
+</div>
+<div class="my-2">
+<div class="text-[17px] font-bold text-ink-900 leading-snug line-clamp-1">Joko Widodo</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-xs-bold text-[11px] text-ink-700">312</span>
+<span class="font-label-xs text-[11px] text-ink-500">kemunculan</span>
+</div>
+</div>
+</section>
+<!-- 2. Tren Sentimen (Area & Line Chart 220px) -->
+<section class="flex flex-col p-space-lg bg-surface rounded-[20px] shadow-sm gap-space-md">
+<div class="flex items-start justify-between">
+<div>
+<h2 class="font-title-md text-[16px] font-semibold text-ink-900 leading-snug">Tren sentimen</h2>
+<p class="font-label-xs text-label-xs text-ink-600">Persentase per hari · 6–12 Nov 2026</p>
+</div>
+<button aria-label="Informasi grafik" class="p-1 rounded-full text-ink-500 hover:text-ink-900">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</button>
+</div>
+<!-- Legenda Mini -->
+<div class="flex items-center justify-start gap-3 text-[11px] font-body-sm text-ink-700">
+<span class="flex items-center gap-1">
+<span class="text-[#1FA463]">☺</span>
+<span>Positif</span>
+<span class="w-3 h-0.5 bg-[#1FA463] rounded-full"></span>
+</span>
+<span class="flex items-center gap-1">
+<span class="text-[#8A94A8] font-bold">–</span>
+<span>Netral</span>
+<span class="w-3 h-0.5 bg-[#8A94A8] rounded-full"></span>
+</span>
+<span class="flex items-center gap-1">
+<span class="text-neg">☹</span>
+<span>Negatif</span>
+<span class="w-3 h-0.5 bg-neg rounded-full"></span>
+</span>
+</div>
+<!-- SVG Chart 220px dengan Tooltip Aktif 10 Nov -->
+<div class="relative w-full h-[220px]">
+<svg class="w-full h-full overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 326 190">
+<!-- Grid horizontal lembut -->
+<line stroke="#F0F2F6" stroke-width="1" x1="0" x2="326" y1="20" y2="20"></line>
+<line stroke="#F0F2F6" stroke-width="1" x1="0" x2="326" y1="70" y2="70"></line>
+<line stroke="#F0F2F6" stroke-width="1" x1="0" x2="326" y1="120" y2="120"></line>
+<line stroke="#F0F2F6" stroke-width="1" x1="0" x2="326" y1="170" y2="170"></line>
+<!-- Garis putus-putus periode lalu (baseline) -->
+<path d="M 10 100 C 60 110, 110 90, 160 95 C 210 100, 260 85, 316 90" opacity="0.7" stroke="#C4C5D8" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<!-- Area gradien halus untuk netral -->
+<defs>
+<lineargradient id="neutralGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#8A94A8" stop-opacity="0.15"></stop>
+<stop offset="100%" stop-color="#8A94A8" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 10 75 C 60 70, 110 78, 160 72 C 210 65, 260 68, 316 70 L 316 170 L 10 170 Z" fill="url(#neutralGrad)"></path>
+<!-- 3 Garis Sentimen -->
+<!-- Netral (#8A94A8) ~41% -->
+<path d="M 10 75 C 60 70, 110 78, 160 72 C 210 65, 260 68, 316 70" stroke="#8A94A8" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Positif (#1FA463) ~38% -->
+<path d="M 10 88 C 60 95, 110 84, 160 82 C 210 76, 260 80, 316 78" stroke="#1FA463" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Negatif (#E5484D) ~21% -->
+<path d="M 10 135 C 60 128, 110 132, 160 138 C 210 130, 260 136, 316 132" stroke="#E5484D" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Indikator tanggal aktif 10 Nov (x = 217) -->
+<line stroke="#2457E6" stroke-dasharray="2 2" stroke-width="1.5" x1="217" x2="217" y1="15" y2="170"></line>
+<!-- Titik data pada 10 Nov -->
+<circle cx="217" cy="65" fill="#FFFFFF" r="4.5" stroke="#8A94A8" stroke-width="2"></circle>
+<circle cx="217" cy="76" fill="#FFFFFF" r="4.5" stroke="#1FA463" stroke-width="2"></circle>
+<circle cx="217" cy="130" fill="#FFFFFF" r="4.5" stroke="#E5484D" stroke-width="2"></circle>
+</svg>
+<!-- Tooltip Aktif 10 Nov -->
+<div class="absolute top-1 left-[142px] z-10 flex flex-col p-2 bg-surface text-ink-900 rounded-[10px] shadow-md pointer-events-none min-w-[130px]">
+<div class="flex items-center justify-between font-label-xs-bold text-[11px] text-ink-600 mb-1">
+<span>10 Nov 2026</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-600"></span>
+</div>
+<div class="flex items-center justify-between text-[11px] font-body-sm leading-tight text-[#137A47]">
+<span>Positif</span>
+<span class="font-label-xs-bold">37%</span>
+</div>
+<div class="flex items-center justify-between text-[11px] font-body-sm leading-tight text-ink-700">
+<span>Netral</span>
+<span class="font-label-xs-bold">41%</span>
+</div>
+<div class="flex items-center justify-between text-[11px] font-body-sm leading-tight text-neg-text">
+<span>Negatif</span>
+<span class="font-label-xs-bold">22%</span>
+</div>
+</div>
+</div>
+<!-- Label Sumbu Tanggal (6 - 12 Nov) -->
+<div class="flex justify-between text-[11px] font-label-xs text-ink-500 px-1 -mt-2">
+<span>6 Nov</span>
+<span>7 Nov</span>
+<span>8 Nov</span>
+<span>9 Nov</span>
+<span class="font-label-xs-bold text-primary-600">10 Nov</span>
+<span>11 Nov</span>
+<span>12 Nov</span>
+</div>
+</section>
+<!-- 3. Empat Tile Sumber Grid 2 x 2 -->
+<section aria-label="Distribusi Sumber Kanal" class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-1">
+<h2 class="font-label-xs-bold text-label-xs-bold text-ink-700 uppercase tracking-wider">Kanal pemantauan</h2>
+<span class="font-label-xs text-[11px] text-ink-500">4 kanal terintegrasi</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Berita -->
+<div class="p-space-md bg-surface rounded-[20px] shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-body-base-medium text-body-sm text-ink-900">Berita</span>
+<span class="font-label-xs text-[11px] text-[#137A47] font-medium">✓ 4 mnt</span>
+</div>
+<div class="my-2">
+<span class="text-[20px] font-bold text-ink-900 leading-none">8.120</span>
+</div>
+<div class="w-full bg-[#EAEEF4] h-1 rounded-full overflow-hidden">
+<div class="h-full bg-[#2457E6] rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<!-- X (Twitter) -->
+<div class="p-space-md bg-surface rounded-[20px] shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-body-base-medium text-body-sm text-ink-900">X</span>
+<span class="font-label-xs text-[11px] text-[#9A5B00] font-medium">◷ 1j 2 mnt</span>
+</div>
+<div class="my-2">
+<span class="text-[20px] font-bold text-ink-900 leading-none">3.012</span>
+</div>
+<div class="w-full bg-[#EAEEF4] h-1 rounded-full overflow-hidden">
+<div class="h-full bg-[#1B2130] rounded-full" style="width: 24%;"></div>
+</div>
+</div>
+<!-- Instagram -->
+<div class="p-space-md bg-surface rounded-[20px] shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-body-base-medium text-body-sm text-ink-900">Instagram</span>
+<span class="font-label-xs text-[11px] text-[#137A47] font-medium">✓ 22 mnt</span>
+</div>
+<div class="my-2">
+<span class="text-[20px] font-bold text-ink-900 leading-none">902</span>
+</div>
+<div class="w-full bg-[#EAEEF4] h-1 rounded-full overflow-hidden">
+<div class="h-full bg-[#C2308C] rounded-full" style="width: 8%;"></div>
+</div>
+</div>
+<!-- Threads -->
+<div class="p-space-md bg-surface rounded-[20px] shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-body-base-medium text-body-sm text-ink-900">Threads</span>
+<span class="font-label-xs text-[11px] text-[#137A47] font-medium">✓ 18 mnt</span>
+</div>
+<div class="my-2">
+<span class="text-[20px] font-bold text-ink-900 leading-none">446</span>
+</div>
+<div class="w-full bg-[#EAEEF4] h-1 rounded-full overflow-hidden">
+<div class="h-full bg-[#7440F5] rounded-full" style="width: 4%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Rasio Sentimen (Gauge Setengah Lingkaran) -->
+<section class="flex flex-col p-space-lg bg-surface rounded-[20px] shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-[16px] font-semibold text-ink-900">Rasio sentimen</h2>
+<span class="font-label-xs text-label-xs text-ink-500">Agregasi 7 hari</span>
+</div>
+<!-- Gauge Arced Semi-Circle Visual -->
+<div class="relative flex flex-col items-center justify-center pt-2">
+<div class="w-[200px] h-[105px] relative overflow-hidden flex items-end justify-center">
+<svg class="w-[200px] h-[200px] transform -rotate-180" viewbox="0 0 100 100">
+<!-- Background arc -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#F0F2F6" stroke-width="12"></circle>
+<!-- Positif 38% (stroke-dasharray total circumference = 251.2, arc setengah = 125.6) -->
+<!-- Positif: 38% dari 125.6 = 47.7 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#1FA463" stroke-dasharray="47.7 203.5" stroke-dashoffset="0" stroke-linecap="butt" stroke-width="12"></circle>
+<!-- Netral: 41% dari 125.6 = 51.5 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#8A94A8" stroke-dasharray="51.5 199.7" stroke-dashoffset="-47.7" stroke-linecap="butt" stroke-width="12"></circle>
+<!-- Negatif: 21% dari 125.6 = 26.4 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#E5484D" stroke-dasharray="26.4 224.8" stroke-dashoffset="-99.2" stroke-linecap="butt" stroke-width="12"></circle>
+</svg>
+<!-- Teks Tengah Gauge -->
+<div class="absolute bottom-0 flex flex-col items-center justify-center pb-1">
+<span class="font-label-xs text-[12px] text-ink-600 font-medium leading-none">Netral</span>
+<span class="text-[28px] font-bold text-ink-900 leading-tight">41%</span>
+</div>
+</div>
+</div>
+<!-- Legenda Detail -->
+<div class="grid grid-cols-3 gap-2 pt-2 text-center">
+<div class="flex flex-col items-center p-2 rounded-xl bg-surface-sunken">
+<div class="flex items-center gap-1 text-[#1FA463] font-label-xs-bold text-[12px]">
+<span>☺</span>
+<span>Positif</span>
+</div>
+<span class="text-[15px] font-bold text-ink-900 mt-0.5">38%</span>
+<span class="font-label-xs text-[11px] text-ink-500">4.742</span>
+</div>
+<div class="flex flex-col items-center p-2 rounded-xl bg-surface-sunken">
+<div class="flex items-center gap-1 text-ink-700 font-label-xs-bold text-[12px]">
+<span class="font-bold">–</span>
+<span>Netral</span>
+</div>
+<span class="text-[15px] font-bold text-ink-900 mt-0.5">41%</span>
+<span class="font-label-xs text-[11px] text-ink-500">5.118</span>
+</div>
+<div class="flex flex-col items-center p-2 rounded-xl bg-surface-sunken">
+<div class="flex items-center gap-1 text-neg-text font-label-xs-bold text-[12px]">
+<span>☹</span>
+<span>Negatif</span>
+</div>
+<span class="text-[15px] font-bold text-ink-900 mt-0.5">21%</span>
+<span class="font-label-xs text-[11px] text-ink-500">2.620</span>
+</div>
+</div>
+<!-- Keterangan Dasar -->
+<div class="flex items-center justify-center gap-1.5 pt-1 text-ink-500">
+<span class="material-symbols-outlined text-[15px]">info</span>
+<span class="font-label-xs text-[12px]">Keyakinan rendah: 14% konten</span>
+</div>
+</section>
+<!-- 5. Kata Kunci (Daftar Batang Horizontal) -->
+<section class="flex flex-col p-space-lg bg-surface rounded-[20px] shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-[16px] font-semibold text-ink-900">Kata kunci</h2>
+<p class="font-label-xs text-label-xs text-ink-600">8 kata teratas berdasarkan frekuensi</p>
+</div>
+<button class="px-2.5 py-1 rounded-full bg-surface-sunken font-label-xs-bold text-[11px] text-ink-700 hover:text-ink-900 transition-colors">
+        Awan
+      </button>
+</div>
+<!-- Daftar 8 Baris Batang Horizontal -->
+<div class="flex flex-col gap-2.5 pt-2">
+<!-- 1. kebijakan (412) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-base-medium text-[13px] text-ink-900">1. kebijakan</span>
+<span class="font-label-xs-bold text-[12px] text-primary-600">412</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-sunken overflow-hidden">
+<div class="h-full bg-primary-600 rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- 2. pemerintah (385) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-base-medium text-[13px] text-ink-900">2. pemerintah</span>
+<span class="font-label-xs-bold text-[12px] text-primary-600">385</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-sunken overflow-hidden">
+<div class="h-full bg-primary-600 rounded-full" style="width: 93%;"></div>
+</div>
+</div>
+<!-- 3. subsidi (294) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-base-medium text-[13px] text-ink-700">3. subsidi</span>
+<span class="font-label-xs text-[12px] text-ink-600">294</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-sunken overflow-hidden">
+<div class="h-full bg-outline-variant rounded-full" style="width: 71%;"></div>
+</div>
+</div>
+<!-- 4. harga (268) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-base-medium text-[13px] text-ink-700">4. harga</span>
+<span class="font-label-xs text-[12px] text-ink-600">268</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-sunken overflow-hidden">
+<div class="h-full bg-outline-variant rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<!-- 5. ekonomi (215) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-base-medium text-[13px] text-ink-700">5. ekonomi</span>
+<span class="font-label-xs text-[12px] text-ink-600">215</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-sunken overflow-hidden">
+<div class="h-full bg-outline-variant rounded-full" style="width: 52%;"></div>
+</div>
+</div>
+<!-- 6. bantuan (198) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-base-medium text-[13px] text-ink-700">6. bantuan</span>
+<span class="font-label-xs text-[12px] text-ink-600">198</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-sunken overflow-hidden">
+<div class="h-full bg-outline-variant rounded-full" style="width: 48%;"></div>
+</div>
+</div>
+<!-- 7. kesehatan (174) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-base-medium text-[13px] text-ink-700">7. kesehatan</span>
+<span class="font-label-xs text-[12px] text-ink-600">174</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-sunken overflow-hidden">
+<div class="h-full bg-outline-variant rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+<!-- 8. pangan (162) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-base-medium text-[13px] text-ink-700">8. pangan</span>
+<span class="font-label-xs text-[12px] text-ink-600">162</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-sunken overflow-hidden">
+<div class="h-full bg-outline-variant rounded-full" style="width: 39%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Jejaring Aktor (Daftar Hubungan Mobile) -->
+<section class="flex flex-col p-space-lg bg-surface rounded-[20px] shadow-sm gap-space-md">
+<div class="flex items-start justify-between">
+<div>
+<h2 class="font-title-md text-[16px] font-semibold text-ink-900 leading-snug">Jejaring aktor</h2>
+<p class="font-label-xs text-label-xs text-ink-600">Dihitung harian · data terbaru 11 Nov 2026</p>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-[10px] bg-surface-sunken text-ink-700 hover:text-ink-900 font-label-xs text-[11px] transition-colors">
+<span class="material-symbols-outlined text-[15px]">hub</span>
+<span>Buka graf</span>
+</button>
+</div>
+<!-- Daftar Entitas Terhubung -->
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="p-2.5 rounded-xl bg-surface-sunken flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-label-xs-bold text-[13px] text-ink-900 truncate">Joko Widodo</span>
+<span class="text-ink-500 text-[12px]">↔</span>
+<span class="font-label-xs-bold text-[13px] text-ink-900 truncate">Prabowo Subianto</span>
+</div>
+<span class="font-label-xs-bold text-[11px] text-primary-600 flex-shrink-0">28 art</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface text-ink-600 font-label-xs">Tokoh ↔ Tokoh</span>
+<span class="text-ink-500 font-label-xs">28 artikel bersama</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-2.5 rounded-xl bg-surface-sunken flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-label-xs-bold text-[13px] text-ink-900 truncate">Kemenkeu</span>
+<span class="text-ink-500 text-[12px]">↔</span>
+<span class="font-label-xs-bold text-[13px] text-ink-900 truncate">Joko Widodo</span>
+</div>
+<span class="font-label-xs-bold text-[11px] text-primary-600 flex-shrink-0">22 art</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface text-ink-600 font-label-xs">Organisasi ↔ Tokoh</span>
+<span class="text-ink-500 font-label-xs">22 artikel bersama</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-2.5 rounded-xl bg-surface-sunken flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-label-xs-bold text-[13px] text-ink-900 truncate">Pertamina</span>
+<span class="text-ink-500 text-[12px]">↔</span>
+<span class="font-label-xs-bold text-[13px] text-ink-900 truncate">Kemenkeu</span>
+</div>
+<span class="font-label-xs-bold text-[11px] text-primary-600 flex-shrink-0">19 art</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface text-ink-600 font-label-xs">Perusahaan ↔ Organisasi</span>
+<span class="text-ink-500 font-label-xs">19 artikel bersama</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-2.5 rounded-xl bg-surface-sunken flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-label-xs-bold text-[13px] text-ink-900 truncate">Kementerian BUMN</span>
+<span class="text-ink-500 text-[12px]">↔</span>
+<span class="font-label-xs-bold text-[13px] text-ink-900 truncate">Pertamina</span>
+</div>
+<span class="font-label-xs-bold text-[11px] text-primary-600 flex-shrink-0">15 art</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface text-ink-600 font-label-xs">Organisasi ↔ Perusahaan</span>
+<span class="text-ink-500 font-label-xs">15 artikel bersama</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Konten Terbaru (ItemRow Cards) -->
+<section aria-label="Aliran Konten Terbaru" class="flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between px-1">
+<h2 class="font-title-md text-[16px] font-semibold text-ink-900">Konten terbaru</h2>
+<a class="font-label-xs-bold text-label-xs-bold text-primary-600 hover:text-primary-700 flex items-center gap-0.5" href="#">
+<span>Lihat 30 terbaru</span>
+<span class="text-[13px]">→</span>
+</a>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: Kompas -->
+<article class="p-space-md bg-surface rounded-[20px] shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-xs-bold text-[11px]">
+              Berita
+            </span>
+<span class="font-body-base-medium text-[12px] text-ink-900">Kompas</span>
+<span class="text-ink-500 text-[10px]">·</span>
+<span class="font-label-xs text-[11px] text-ink-500">12 Nov 09:31 WIB</span>
+</div>
+<button aria-label="Buka sumber asli Kompas" class="text-ink-500 hover:text-primary-600 transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+<p class="font-body-sm text-[13px] text-ink-900 font-medium leading-snug line-clamp-2">
+          Pemerintah siapkan skema penyesuaian subsidi energi untuk menjaga stabilitas anggaran serta ketahanan fiskal nasional...
+        </p>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#E8F6EE] text-[#137A47] font-label-xs-bold text-[11px]">
+<span>☺</span>
+<span>Positif</span>
+</span>
+<span class="font-label-xs text-[11px] text-ink-500">Relevansi 98%</span>
+</div>
+</article>
+<!-- Item 2: Detik -->
+<article class="p-space-md bg-surface rounded-[20px] shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-xs-bold text-[11px]">
+              Berita
+            </span>
+<span class="font-body-base-medium text-[12px] text-ink-900">Detik</span>
+<span class="text-ink-500 text-[10px]">·</span>
+<span class="font-label-xs text-[11px] text-ink-500">12 Nov 09:14 WIB</span>
+</div>
+<button aria-label="Buka sumber asli Detik" class="text-ink-500 hover:text-primary-600 transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+<p class="font-body-sm text-[13px] text-ink-900 font-medium leading-snug line-clamp-2">
+          Rapat kerja evaluasi penyaluran bantuan sosial kuartal empat berlangsung transparan dengan penekanan validasi data terpadu...
+        </p>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#EAEEF4] text-ink-700 font-label-xs-bold text-[11px]">
+<span>–</span>
+<span>Netral · Keyakinan rendah</span>
+</span>
+<span class="font-label-xs text-[11px] text-ink-500">Relevansi 94%</span>
+</div>
+</article>
+<!-- Item 3: X @kemensetneg_ri -->
+<article class="p-space-md bg-surface rounded-[20px] shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-[#EAEEF4] text-[#1B2130] font-label-xs-bold text-[11px]">
+              X
+            </span>
+<span class="font-body-base-medium text-[12px] text-ink-900">@kemensetneg_ri</span>
+<span class="text-ink-500 text-[10px]">·</span>
+<span class="font-label-xs text-[11px] text-ink-500">12 Nov 08:48 WIB</span>
+</div>
+<button aria-label="Buka sumber asli postingan X" class="text-ink-500 hover:text-primary-600 transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+<p class="font-body-sm text-[13px] text-ink-900 font-medium leading-snug line-clamp-2">
+          Presiden memimpin rapat koordinasi penataan transportasi massal perkotaan bersama kepala daerah guna akselerasi integrasi antarmoda publik...
+        </p>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#E8F6EE] text-[#137A47] font-label-xs-bold text-[11px]">
+<span>☺</span>
+<span>Positif</span>
+</span>
+<span class="font-label-xs text-[11px] text-ink-500">2.140 interaksi</span>
+</div>
+</article>
+<!-- Item 4: ANTARA -->
+<article class="p-space-md bg-surface rounded-[20px] shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-xs-bold text-[11px]">
+              Berita
+            </span>
+<span class="font-body-base-medium text-[12px] text-ink-900">ANTARA</span>
+<span class="text-ink-500 text-[10px]">·</span>
+<span class="font-label-xs text-[11px] text-ink-500">12 Nov 08:22 WIB</span>
+</div>
+<button aria-label="Buka sumber asli ANTARA" class="text-ink-500 hover:text-primary-600 transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+<p class="font-body-sm text-[13px] text-ink-900 font-medium leading-snug line-clamp-2">
+          Fluktuasi harga komoditas pangan pokok memicu keluhan pedagang di sejumlah pasar tradisional akibat pasokan curah hujan tinggi...
+        </p>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-neg-tint text-neg-text font-label-xs-bold text-[11px]">
+<span>☹</span>
+<span>Negatif</span>
+</span>
+<span class="font-label-xs text-[11px] text-ink-500">Relevansi 91%</span>
+</div>
+</article>
+</div>
+</section>
+</div></main><nav class="fixed bottom-0 w-full max-w-[390px] z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(15,23,41,0.05)]" data-active-classes="text-primary-600 font-label-xs-bold"><div class="h-16 px-space-sm flex items-center justify-around"><a aria-current="page" class="flex flex-col items-center justify-center w-14 h-11 gap-0.5 transition-colors text-primary-600 font-label-xs-bold" data-path="live-feed" href="#"><span class="material-symbols-outlined text-[22px]">dynamic_feed</span><span class="font-label-xs text-label-xs">Feed</span></a><a class="flex flex-col items-center justify-center w-14 h-11 gap-0.5 text-ink-500 hover:text-ink-700 transition-colors" data-path="alert-stream" href="#"><span class="material-symbols-outlined text-[22px]">notifications_active</span><span class="font-label-xs text-label-xs">Alerts</span></a><a class="flex flex-col items-center justify-center w-14 h-11 gap-0.5 text-ink-500 hover:text-ink-700 transition-colors" data-path="source-radar" href="#"><span class="material-symbols-outlined text-[22px]">radar</span><span class="font-label-xs text-label-xs">Radar</span></a><a class="flex flex-col items-center justify-center w-14 h-11 gap-0.5 text-ink-500 hover:text-ink-700 transition-colors" data-path="analytics-hub" href="#"><span class="material-symbols-outlined text-[22px]">monitoring</span><span class="font-label-xs text-label-xs">Metrik</span></a></div></nav></div></body></html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary-700": "#1B45C2",
+          "surface-container-high": "#e1e8ff",
+          "on-secondary-fixed-variant": "#3d475b",
+          "tertiary-fixed-dim": "#ffb59a",
+          "primary": "#003ec1",
+          "on-primary-container": "#dce1ff",
+          "neg": "#E5484D",
+          "on-primary": "#ffffff",
+          "surface-bright": "#faf8ff",
+          "primary-container": "#2457e6",
+          "on-tertiary": "#ffffff",
+          "on-error-container": "#93000a",
+          "surface-container": "#e9edff",
+          "primary-fixed-dim": "#b7c4ff",
+          "on-primary-fixed": "#001551",
+          "surface": "#FFFFFF",
+          "surface-container-lowest": "#ffffff",
+          "border-control": "#8C95A8",
+          "secondary": "#545f74",
+          "background": "#faf8ff",
+          "error-container": "#ffdad6",
+          "tertiary-container": "#b33d00",
+          "outline-variant": "#c4c5d8",
+          "inverse-surface": "#283043",
+          "ink-500": "#6B7488",
+          "surface-variant": "#dbe2fb",
+          "surface-dim": "#d2d9f3",
+          "secondary-fixed-dim": "#bcc6df",
+          "on-secondary-fixed": "#111c2e",
+          "secondary-fixed": "#d8e2fc",
+          "canvas": "#F3F5F9",
+          "on-secondary-container": "#5a647a",
+          "outline": "#747686",
+          "on-surface-variant": "#434655",
+          "surface-tint": "#1850df",
+          "surface-sunken": "#F7F8FB",
+          "surface-container-highest": "#dbe2fb",
+          "inverse-primary": "#b7c4ff",
+          "border-subtle": "#E6E9F0",
+          "secondary-container": "#d8e2fc",
+          "inverse-on-surface": "#edf0ff",
+          "on-tertiary-container": "#ffdbcf",
+          "surface-container-low": "#f2f3ff",
+          "on-tertiary-fixed-variant": "#802900",
+          "ink-900": "#0F1729",
+          "primary-fixed": "#dce1ff",
+          "on-surface": "#131b2d",
+          "tertiary": "#8b2d00",
+          "ink-600": "#566075",
+          "on-background": "#131b2d",
+          "primary-600": "#2457E6",
+          "ink-700": "#3B4559",
+          "on-secondary": "#ffffff",
+          "on-tertiary-fixed": "#380d00",
+          "tertiary-fixed": "#ffdbcf",
+          "error": "#ba1a1a",
+          "neg-text": "#C2262E",
+          "on-error": "#ffffff",
+          "on-primary-fixed-variant": "#0039b3",
+          "neg-tint": "#FDECEC"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "margin": "1rem",
+          "space-md": "0.75rem",
+          "gutter-desktop": "1.5rem",
+          "space-sm": "0.5rem",
+          "margin-desktop": "2rem",
+          "gutter": "1rem",
+          "space-lg": "1rem",
+          "space-xl": "1.5rem"
+        },
+        "fontFamily": {
+          "title-md": [
+            "Manrope"
+          ],
+          "body-base": [
+            "Manrope"
+          ],
+          "headline-xl-mobile": [
+            "Manrope"
+          ],
+          "label-xs": [
+            "Manrope"
+          ],
+          "headline-xl": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ],
+          "label-xs-bold": [
+            "Manrope"
+          ],
+          "body-base-medium": [
+            "Manrope"
+          ]
+        },
+        "fontSize": {
+          "title-md": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-base": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl-mobile": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-xs": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-xl": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-xs-bold": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-base-medium": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  };</script></head><body class="bg-canvas font-body-base text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface border-r border-border-subtle z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-md border-b border-border-subtle"><div class="w-9 h-9 rounded-lg bg-primary-700 flex items-center justify-center text-on-primary font-headline-xl text-headline-xl font-bold tracking-tight">PM</div><div class="flex flex-col min-w-0"><span class="font-body-base-medium text-body-base-medium text-ink-900 leading-tight truncate font-bold">Pantau Media</span><span class="font-label-xs text-label-xs text-ink-500 uppercase tracking-wider font-semibold">Platform OSINT</span></div></div><div class="py-space-md px-space-sm"><div class="px-space-md py-space-xs font-label-xs-bold text-label-xs-bold text-ink-500 uppercase tracking-wider">Pimpinan</div><nav class="space-y-0.5 mt-1" data-active-classes="bg-surface-container-high text-primary-700 border-l-[3px] border-primary-600 font-semibold"><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="jejaring-aktor" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">hub</span><span>Jejaring Aktor</span></a></nav><div class="mt-space-md pt-space-sm border-t border-border-subtle"><div class="px-space-md py-space-xs font-label-xs-bold text-label-xs-bold text-ink-500 uppercase tracking-wider">Administrasi</div><nav class="space-y-0.5 mt-1" data-active-classes="bg-surface-container-high text-primary-700 border-l-[3px] border-primary-600 font-semibold"><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="status-sistem" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">dns</span><span>Status Sistem</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="sumber-rss" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">rss_feed</span><span>Sumber RSS</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="media-sosial" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">share</span><span>Media Sosial</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="koneksi-x" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">tag</span><span>Koneksi X</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="kamus-alias" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">spellcheck</span><span>Kamus Alias</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-2 rounded transition-colors bg-surface-container-high text-primary-700 border-l-[3px] border-primary-600 font-semibold" data-path="pengguna" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">group</span><span>Pengguna</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="audit-log" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">history</span><span>Audit Log</span></a></nav></div></div></div><div class="p-space-md mt-space-sm"><div class="rounded-2xl p-3 text-on-primary shadow-sm" style="background: linear-gradient(165deg, #1B45C2, #10245F);"><div class="flex items-center justify-between mb-2"><span class="font-label-xs-bold text-label-xs-bold tracking-tight text-white">Kesegaran Data</span><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">sync</span></div><div class="space-y-1.5 font-label-xs text-label-xs"><div class="flex items-center justify-between text-surface-container-high"><span>Berita</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-surface"></span><span class="text-white font-medium">Aktif</span></div></div><div class="flex items-center justify-between text-surface-container-high"><span>X (Twitter)</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span><span class="text-tertiary-fixed font-medium">Terlambat</span></div></div><div class="flex items-center justify-between text-surface-container-high"><span>Instagram</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-surface"></span><span class="text-white font-medium">Aktif</span></div></div><div class="flex items-center justify-between text-surface-container-high"><span>Threads</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-surface"></span><span class="text-white font-medium">Aktif</span></div></div></div></div><div class="mt-2 px-1 text-center"><a class="font-label-xs text-label-xs text-ink-500 hover:text-primary-700 transition-colors inline-flex items-center gap-1" data-path="dokumentasi-data" href="#"><span>Cara membaca data</span><span class="material-symbols-outlined text-[14px]">help_outline</span></a></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-16 bg-surface border-b border-border-subtle z-40 px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><button aria-label="Toggle Sidebar" class="w-9 h-9 rounded-lg flex items-center justify-center text-ink-600 hover:bg-surface-sunken hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">menu</span></button><div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-sunken border border-border-subtle font-label-xs text-label-xs text-ink-700"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-medium">1 sumber terlambat (X)</span></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifikasi Admin" class="relative w-9 h-9 rounded-lg flex items-center justify-center text-ink-600 hover:bg-surface-sunken hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-neg ring-2 ring-surface"></span></button><div class="h-5 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-xs-bold text-label-xs-bold shadow-sm"><span>AS</span></div><div class="hidden md:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-ink-900 leading-tight">Admin Sektor</span><span class="font-label-xs text-label-xs text-ink-500">Super Admin</span></div></div></div></header><main class="relative pt-16 bg-canvas min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Interactive script to handle modal toggle, tabs, and copy action -->
+<script>
+    function closeModal() {
+      const modal = document.getElementById('modal-tambah-pengguna');
+      const scrim = document.getElementById('modal-scrim');
+      if (modal && scrim) {
+        modal.classList.add('opacity-0', 'scale-95');
+        scrim.classList.add('opacity-0');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          scrim.classList.add('hidden');
+        }, 150);
+      }
+    }
+
+    function openModal() {
+      const modal = document.getElementById('modal-tambah-pengguna');
+      const scrim = document.getElementById('modal-scrim');
+      if (modal && scrim) {
+        modal.classList.remove('hidden');
+        scrim.classList.remove('hidden');
+        setTimeout(() => {
+          modal.classList.remove('opacity-0', 'scale-95');
+          scrim.classList.remove('opacity-0');
+        }, 10);
+      }
+    }
+
+    function copyTempPassword() {
+      const passText = document.getElementById('temp-pass-field').innerText;
+      navigator.clipboard.writeText(passText).then(() => {
+        const btn = document.getElementById('btn-copy-pass');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[15px] text-primary-600">check</span><span class="text-primary-600 font-semibold">Tersalin</span>';
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+        }, 2000);
+      });
+    }
+
+    function toggleMfaSwitch() {
+      const toggle = document.getElementById('mfa-toggle-button');
+      const knob = document.getElementById('mfa-toggle-knob');
+      const isChecked = toggle.getAttribute('data-checked') === 'true';
+      if (isChecked) {
+        toggle.setAttribute('data-checked', 'false');
+        toggle.classList.remove('bg-primary-600');
+        toggle.classList.add('bg-ink-500');
+        knob.classList.remove('translate-x-5');
+        knob.classList.add('translate-x-0.5');
+      } else {
+        toggle.setAttribute('data-checked', 'true');
+        toggle.classList.remove('bg-ink-500');
+        toggle.classList.add('bg-primary-600');
+        knob.classList.remove('translate-x-0.5');
+        knob.classList.add('translate-x-5');
+      }
+    }
+  </script>
+<!-- Background Data View: Desktop User Management Table (/admin/users) -->
+<div class="px-margin-desktop py-space-xl flex flex-col gap-space-lg select-none">
+<!-- Top Action Breadcrumbs and Title Strip -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 font-label-xs text-label-xs text-ink-500">
+<span>Administrasi</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-ink-700 font-semibold">Pengguna Sistem</span>
+</div>
+<div class="flex items-center gap-3">
+<h1 class="font-headline-xl text-headline-xl font-bold text-ink-900 tracking-tight">Manajemen Pengguna</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary-700 font-label-xs-bold text-label-xs-bold">14 Akun Aktif</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface text-ink-700 font-body-sm text-body-sm font-medium hover:bg-surface-sunken transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-ink-500">download</span>
+<span>Ekspor Log Akses</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-2 rounded-lg bg-primary-600 text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-700 transition-colors shadow-sm" onclick="openModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Tambah Pengguna</span>
+</button>
+</div>
+</div>
+<!-- Search Omnibar & Filter Strip -->
+<div class="grid grid-cols-12 gap-space-md bg-surface p-space-md rounded-xl shadow-sm">
+<div class="col-span-12 md:col-span-6 flex items-center gap-2 bg-surface-sunken px-3 py-2 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-ink-500">search</span>
+<input class="bg-transparent w-full text-body-sm font-body-sm text-ink-900 focus:outline-none" disabled="" placeholder="Cari nama, alias pengguna, atau peran..." type="text" value=""/>
+<span class="px-1.5 py-0.5 bg-surface rounded text-ink-500 font-label-xs text-label-xs shadow-xs">⌘K</span>
+</div>
+<div class="col-span-6 md:col-span-3 flex items-center gap-2 bg-surface-sunken px-3 py-2 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-ink-500">filter_list</span>
+<span class="text-body-sm font-body-sm text-ink-700 font-medium">Peran: Semua (2 Peran)</span>
+</div>
+<div class="col-span-6 md:col-span-3 flex items-center justify-between bg-surface-sunken px-3 py-2 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-ink-500">verified_user</span>
+<span class="text-body-sm font-body-sm text-ink-700 font-medium">Status MFA: Wajib</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary-600"></span>
+</div>
+</div>
+<!-- User Data Table Container -->
+<div class="bg-surface rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-sunken font-label-xs-bold text-label-xs-bold text-ink-600 uppercase tracking-wider">
+<tr>
+<th class="py-3 px-space-lg">Nama &amp; Identitas</th>
+<th class="py-3 px-space-md">Peran Otoritas</th>
+<th class="py-3 px-space-md">Status MFA</th>
+<th class="py-3 px-space-md">Masuk Terakhir</th>
+<th class="py-3 px-space-md">Dibuat Oleh</th>
+<th class="py-3 px-space-lg text-right">Tindakan</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low text-ink-900">
+<!-- Row 1: Admin Sektor (Self) -->
+<tr class="hover:bg-surface-sunken transition-colors">
+<td class="py-3.5 px-space-lg flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-xs-bold text-label-xs-bold">AS</div>
+<div class="flex flex-col">
+<span class="font-semibold text-ink-900">admin.sektor</span>
+<span class="font-label-xs text-label-xs text-ink-500">Pusat Operasi Siber Kemhan RI</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary-700 font-label-xs-bold text-label-xs-bold">Super Admin</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-ink-900 font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[14px] text-primary-600">check_circle</span> Terverifikasi
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-ink-600 font-label-xs text-label-xs">Baru saja (08:24 WIB)</td>
+<td class="py-3.5 px-space-md text-ink-600 font-label-xs text-label-xs">Sistem Inisial</td>
+<td class="py-3.5 px-space-lg text-right">
+<button class="w-8 h-8 rounded-lg text-ink-500 hover:text-ink-900 hover:bg-surface inline-flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Dirjen Analisis -->
+<tr class="hover:bg-surface-sunken transition-colors">
+<td class="py-3.5 px-space-lg flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-label-xs-bold text-label-xs-bold">DA</div>
+<div class="flex flex-col">
+<span class="font-semibold text-ink-900">dirjen.analisis</span>
+<span class="font-label-xs text-label-xs text-ink-500">Direktorat Analisis Isu Strategis</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-surface-sunken text-ink-700 font-label-xs-bold text-label-xs-bold">Pimpinan</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-ink-900 font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[14px] text-primary-600">check_circle</span> Terverifikasi
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-ink-600 font-label-xs text-label-xs">Kemarin, 19:42 WIB</td>
+<td class="py-3.5 px-space-md text-ink-600 font-label-xs text-label-xs">admin.sektor</td>
+<td class="py-3.5 px-space-lg text-right">
+<button class="w-8 h-8 rounded-lg text-ink-500 hover:text-ink-900 hover:bg-surface inline-flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Mayor Inf Rahmat -->
+<tr class="hover:bg-surface-sunken transition-colors">
+<td class="py-3.5 px-space-lg flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-label-xs-bold text-label-xs-bold">RS</div>
+<div class="flex flex-col">
+<span class="font-semibold text-ink-900">rahmat.santoso</span>
+<span class="font-label-xs text-label-xs text-ink-500">Satgas Informasi Strategis</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-surface-sunken text-ink-700 font-label-xs-bold text-label-xs-bold">Pimpinan</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[14px] text-error">warning</span> Belum Registrasi
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-ink-600 font-label-xs text-label-xs">Belum pernah</td>
+<td class="py-3.5 px-space-md text-ink-600 font-label-xs text-label-xs">admin.sektor</td>
+<td class="py-3.5 px-space-lg text-right">
+<button class="w-8 h-8 rounded-lg text-ink-500 hover:text-ink-900 hover:bg-surface inline-flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="p-space-md bg-surface-bright flex items-center justify-between text-ink-500 font-label-xs text-label-xs">
+<span>Menampilkan 3 dari 14 akun terdaftar</span>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface text-ink-700 shadow-xs" disabled="" type="button">Sebelumnya</button>
+<button class="px-2.5 py-1 rounded bg-primary-600 text-on-primary font-bold" type="button">1</button>
+<button class="px-2.5 py-1 rounded bg-surface text-ink-700 hover:bg-surface-sunken" type="button">2</button>
+<button class="px-2.5 py-1 rounded bg-surface text-ink-700 hover:bg-surface-sunken" type="button">Berikutnya</button>
+</div>
+</div>
+</div>
+</div>
+<!-- FIXED MODAL OVERLAY SCRIM (DESIGN.md 7.4 rgb(15 23 41 / 40%)) -->
+<div class="fixed inset-0 bg-[#0F1729]/40 z-50 backdrop-blur-[2px] transition-opacity duration-200" id="modal-scrim" onclick="closeModal()"></div>
+<!-- MODAL CONTAINER (Centered, Width 520px, Radius 28px, Padding 32px, shadow-modal) -->
+<div class="fixed inset-0 z-50 pointer-events-none flex items-center justify-center p-4">
+<div class="pointer-events-auto relative w-full max-w-[520px] bg-surface rounded-[28px] p-8 shadow-[0_24px_64px_-16px_rgba(15,23,41,0.30)] flex flex-col gap-6 transform transition-all duration-200 ease-out scale-100 opacity-100" id="modal-tambah-pengguna">
+<!-- MODAL HEADER -->
+<div class="flex flex-col gap-1.5 relative">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-ink-900 tracking-tight">
+            Tambah pengguna
+          </h2>
+<!-- Round Close Button (✕) #F7F8FB hover #EEF3FF radius full -->
+<button aria-label="Tutup dialog modal" class="w-8 h-8 rounded-full bg-surface-sunken hover:bg-surface-container text-ink-600 hover:text-ink-900 flex items-center justify-center transition-colors" onclick="closeModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-ink-600">
+          Buat akun akses baru untuk pimpinan atau administrator instansi.
+        </p>
+</div>
+<!-- FORM CONTENT STACK -->
+<form class="flex flex-col gap-5" onsubmit="event.preventDefault(); closeModal();">
+<!-- Field 1: Nama Pengguna -->
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm text-body-sm font-semibold text-ink-700" for="input-username">
+            Nama pengguna
+          </label>
+<div class="relative">
+<input class="w-full bg-surface text-ink-900 font-body-base text-body-base px-3.5 py-2.5 rounded-[10px] bg-surface-sunken focus:bg-surface transition-colors focus:outline-none focus:ring-2 focus:ring-primary-600" id="input-username" placeholder="nama.pegawai" type="text" value="siti.nurhaliza"/>
+</div>
+<p class="font-label-xs text-label-xs text-ink-500">
+            Gunakan format nama.standar instansi tanpa spasi.
+          </p>
+</div>
+<!-- Field 2: Peran Akun (Dropdown) -->
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm text-body-sm font-semibold text-ink-700" for="select-role">
+            Peran akun
+          </label>
+<div class="relative">
+<select class="w-full bg-surface text-ink-900 font-body-base text-body-base px-3.5 py-2.5 rounded-[10px] bg-surface-sunken focus:bg-surface transition-colors focus:outline-none focus:ring-2 focus:ring-primary-600 appearance-none cursor-pointer pr-10" id="select-role">
+<option selected="" value="pimpinan">Pimpinan</option>
+<option value="admin">Admin</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[20px] text-ink-500">
+              unfold_more
+            </span>
+</div>
+<p class="font-label-xs text-label-xs text-ink-500">
+            Pimpinan: Hanya membaca dashboard, ringkasan sentimen, dan jejaring aktor.
+          </p>
+</div>
+<!-- Security Setting 3: MFA Toggle Switch Box -->
+<div class="bg-surface-sunken rounded-[14px] p-4 flex items-center justify-between gap-4">
+<div class="flex flex-col gap-0.5">
+<span class="font-body-sm text-body-sm font-semibold text-ink-900">
+              Wajibkan verifikasi dua langkah (MFA)
+            </span>
+<span class="font-label-xs text-label-xs text-ink-600">
+              Pengguna wajib memindai QR TOTP pada login pertama.
+            </span>
+</div>
+<!-- Toggle button active state -->
+<button aria-checked="true" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full bg-primary-600 transition-colors duration-200 ease-in-out focus:outline-none" data-checked="true" id="mfa-toggle-button" onclick="toggleMfaSwitch()" role="switch" type="button">
+<span class="pointer-events-none inline-block h-5 w-5 transform translate-x-5 rounded-full bg-surface shadow-sm ring-0 transition duration-200 ease-in-out mt-0.5" id="mfa-toggle-knob"></span>
+</button>
+</div>
+<!-- Security Setting 4: Temporary Password Box -->
+<div class="bg-surface-sunken rounded-[14px] p-4 flex flex-col gap-3 relative overflow-hidden">
+<div class="flex items-center gap-1.5 text-primary-700">
+<span class="material-symbols-outlined text-[16px]">key</span>
+<span class="font-label-xs-bold text-label-xs-bold uppercase tracking-wider">
+              Kata sandi sementara
+            </span>
+</div>
+<!-- Monospace styled code display & copy button -->
+<div class="flex items-center justify-between bg-surface rounded-[10px] p-2 pl-3.5 shadow-xs">
+<code class="font-body-base text-[15px] font-bold text-ink-900 tracking-wider font-mono select-all" id="temp-pass-field">
+              PM-9824-XkLm#7
+            </code>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[8px] bg-surface text-ink-700 font-label-xs-bold text-label-xs-bold hover:bg-surface-sunken transition-colors shadow-xs" id="btn-copy-pass" onclick="copyTempPassword()" type="button">
+<span class="material-symbols-outlined text-[15px] text-ink-600">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+<!-- Alert / Advisory Note -->
+<div class="flex items-start gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[16px] flex-shrink-0 mt-0.5 text-tertiary-container">info</span>
+<p class="font-label-xs text-label-xs text-[#9A5B00] leading-relaxed">
+              Kata sandi ini hanya tampil sekali. Salin dan kirimkan ke pengguna melalui saluran komunikasi kedinasan yang aman. Pengguna wajib mengganti kata sandi saat pertama kali masuk.
+            </p>
+</div>
+</div>
+<!-- MODAL FOOTER -->
+<div class="pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-1">
+<div class="flex items-center gap-1.5 text-ink-500 font-label-xs text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-600"></span>
+<span>Menunggu pendaftaran MFA setelah dibuat.</span>
+</div>
+<div class="flex items-center justify-end gap-2.5">
+<button class="px-4 py-2.5 rounded-[10px] bg-surface text-ink-700 hover:bg-surface-sunken font-body-sm text-body-sm font-medium transition-colors" onclick="closeModal()" type="button">
+              Batal
+            </button>
+<button class="px-5 py-2.5 rounded-[10px] bg-primary-600 hover:bg-primary-700 text-on-primary font-body-sm text-body-sm font-semibold transition-colors shadow-sm inline-flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Buat pengguna</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div></main></div></body></html>

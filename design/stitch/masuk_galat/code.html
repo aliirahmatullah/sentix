@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk (Galat) - Pantau Media</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+          },
+          colors: {
+            canvas: '#F3F5F9',
+            surface: '#FFFFFF',
+            sunken: '#F7F8FB',
+            line: '#E6E9F0',
+            control: '#8C95A8',
+            'ink-900': '#0F1729',
+            'ink-700': '#3B4559',
+            'ink-600': '#566075',
+            'ink-500': '#6B7488',
+            'primary-50': '#EEF3FF',
+            'primary-600': '#2457E6',
+            'primary-700': '#1B45C2',
+            'neg': '#E5484D',
+            'neg-text': '#C2262E',
+            'neg-tint': '#FDECEC',
+          },
+          borderRadius: {
+            'sm': '10px',
+            'xl': '28px',
+          },
+          boxShadow: {
+            'card': '0 1px 2px rgb(15 23 41 / 0.04), 0 2px 8px -2px rgb(15 23 41 / 0.04)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #F3F5F9;
+      color: #0F1729;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#F3F5F9] flex flex-col items-center justify-center p-6 selection:bg-[#EEF3FF] selection:text-[#2457E6]">
+
+  <!-- Main Container -->
+  <main class="w-full max-w-[420px] flex flex-col items-center">
+    
+    <!-- Login Card -->
+    <div class="w-full bg-white rounded-[28px] p-10 shadow-[0_1px_2px_rgb(15_23_41_/_0.04),_0_2px_8px_-2px_rgb(15_23_41_/_0.04)] border border-[#E6E9F0]">
+      
+      <!-- Brand Header -->
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-10 h-10 rounded-[10px] bg-[#2457E6] flex items-center justify-center text-white font-bold text-lg shadow-sm">
+          <!-- Diamond / Monogram Icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 12l10 10 10-12L12 2z"></path>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[17px] font-bold tracking-tight text-[#0F1729] leading-tight">Pantau Media</span>
+          <span class="text-[12px] font-medium text-[#6B7488]">Platform Monitoring &amp; OSINT</span>
+        </div>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="text-[24px] leading-[32px] font-bold text-[#0F1729] tracking-[-0.01em] mb-5">
+        Masuk
+      </h1>
+
+      <!-- Error Banner (Di atas formulir, ikon segitiga seru, bg #FDECEC, teks #C2262E) -->
+      <div 
+        role="alert" 
+        class="flex items-center gap-2.5 px-3.5 py-3 mb-5 rounded-[10px] bg-[#FDECEC] border border-[#E5484D]/20 text-[#C2262E]"
+      >
+        <svg class="w-5 h-5 flex-shrink-0 text-[#C2262E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+          <line x1="12" y1="9" x2="12" y2="13" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
+        </svg>
+        <p class="text-[13px] leading-[18px] font-medium text-[#C2262E]">
+          Nama pengguna atau kata sandi tidak cocok.
+        </p>
+      </div>
+
+      <!-- Login Form (Kolom input tetap normal, tidak diberi warna merah - sesuai spesifikasi) -->
+      <form action="#" method="POST" onsubmit="event.preventDefault();" class="space-y-5">
+        
+        <!-- Input Nama Pengguna -->
+        <div class="space-y-2">
+          <label for="username" class="block text-[14px] leading-[22px] font-medium text-[#3B4559]">
+            Nama pengguna
+          </label>
+          <div class="relative">
+            <input 
+              type="text" 
+              id="username" 
+              name="username" 
+              value="analis.utama"
+              autocomplete="username" 
+              required
+              placeholder="Masukkan nama pengguna" 
+              class="w-full h-11 px-3.5 bg-white border border-[#8C95A8] rounded-[10px] text-[14px] text-[#0F1729] placeholder-[#98A0B3] transition-all focus:outline-none focus:border-[#2457E6] focus:ring-2 focus:ring-[#2457E6]/20"
+            />
+          </div>
+        </div>
+
+        <!-- Input Kata Sandi -->
+        <div class="space-y-2">
+          <label for="password" class="block text-[14px] leading-[22px] font-medium text-[#3B4559]">
+            Kata sandi
+          </label>
+          <div class="relative flex items-center">
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              value="••••••••••••"
+              autocomplete="current-password" 
+              required
+              placeholder="Masukkan kata sandi" 
+              class="w-full h-11 pl-3.5 pr-11 bg-white border border-[#8C95A8] rounded-[10px] text-[14px] text-[#0F1729] placeholder-[#98A0B3] transition-all focus:outline-none focus:border-[#2457E6] focus:ring-2 focus:ring-[#2457E6]/20"
+            />
+            <button 
+              type="button" 
+              id="togglePassword"
+              aria-label="Tampilkan atau sembunyikan kata sandi" 
+              aria-pressed="false"
+              class="absolute right-3 w-8 h-8 flex items-center justify-center text-[#6B7488] hover:text-[#0F1729] focus:outline-none focus:ring-2 focus:ring-[#2457E6] rounded-md transition-colors"
+              onclick="
+                const pwd = document.getElementById('password');
+                const isPwd = pwd.getAttribute('type') === 'password';
+                pwd.setAttribute('type', isPwd ? 'text' : 'password');
+                this.setAttribute('aria-pressed', isPwd ? 'true' : 'false');
+                document.getElementById('icon-eye-open').classList.toggle('hidden', isPwd);
+                document.getElementById('icon-eye-closed').classList.toggle('hidden', !isPwd);
+              "
+            >
+              <!-- Eye Open -->
+              <svg id="icon-eye-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <!-- Eye Closed -->
+              <svg id="icon-eye-closed" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+          type="submit" 
+          class="w-full h-11 bg-[#2457E6] hover:bg-[#1B45C2] active:bg-[#17368F] text-white font-semibold text-[14px] leading-[22px] rounded-[10px] transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2457E6] mt-2 cursor-pointer"
+        >
+          Masuk
+        </button>
+
+      </form>
+
+      <!-- Help Link -->
+      <div class="mt-6 text-center">
+        <span class="text-[13px] leading-[20px] text-[#6B7488]">Lupa akses? </span>
+        <a 
+          href="/login/help" 
+          class="text-[13px] leading-[20px] font-medium text-[#2457E6] hover:text-[#1B45C2] hover:underline focus:outline-none focus:ring-1 focus:ring-[#2457E6] rounded"
+        >
+          Lihat bantuan
+        </a>
+      </div>
+
+    </div>
+
+    <!-- External Note / Restricted Access Footer -->
+    <p class="mt-6 text-center text-[12px] leading-[16px] text-[#6B7488] font-medium">
+      Akses hanya melalui jaringan instansi (VPN/LAN)
+    </p>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary-700": "#1B45C2",
+          "surface-container-high": "#e1e8ff",
+          "on-secondary-fixed-variant": "#3d475b",
+          "tertiary-fixed-dim": "#ffb59a",
+          "primary": "#003ec1",
+          "on-primary-container": "#dce1ff",
+          "neg": "#E5484D",
+          "on-primary": "#ffffff",
+          "surface-bright": "#faf8ff",
+          "primary-container": "#2457e6",
+          "on-tertiary": "#ffffff",
+          "on-error-container": "#93000a",
+          "surface-container": "#e9edff",
+          "primary-fixed-dim": "#b7c4ff",
+          "on-primary-fixed": "#001551",
+          "surface": "#FFFFFF",
+          "surface-container-lowest": "#ffffff",
+          "border-control": "#8C95A8",
+          "secondary": "#545f74",
+          "background": "#faf8ff",
+          "error-container": "#ffdad6",
+          "tertiary-container": "#b33d00",
+          "outline-variant": "#c4c5d8",
+          "inverse-surface": "#283043",
+          "ink-500": "#6B7488",
+          "surface-variant": "#dbe2fb",
+          "surface-dim": "#d2d9f3",
+          "secondary-fixed-dim": "#bcc6df",
+          "on-secondary-fixed": "#111c2e",
+          "secondary-fixed": "#d8e2fc",
+          "canvas": "#F3F5F9",
+          "on-secondary-container": "#5a647a",
+          "outline": "#747686",
+          "on-surface-variant": "#434655",
+          "surface-tint": "#1850df",
+          "surface-sunken": "#F7F8FB",
+          "surface-container-highest": "#dbe2fb",
+          "inverse-primary": "#b7c4ff",
+          "border-subtle": "#E6E9F0",
+          "secondary-container": "#d8e2fc",
+          "inverse-on-surface": "#edf0ff",
+          "on-tertiary-container": "#ffdbcf",
+          "surface-container-low": "#f2f3ff",
+          "on-tertiary-fixed-variant": "#802900",
+          "ink-900": "#0F1729",
+          "primary-fixed": "#dce1ff",
+          "on-surface": "#131b2d",
+          "tertiary": "#8b2d00",
+          "ink-600": "#566075",
+          "on-background": "#131b2d",
+          "primary-600": "#2457E6",
+          "ink-700": "#3B4559",
+          "on-secondary": "#ffffff",
+          "on-tertiary-fixed": "#380d00",
+          "tertiary-fixed": "#ffdbcf",
+          "error": "#ba1a1a",
+          "neg-text": "#C2262E",
+          "on-error": "#ffffff",
+          "on-primary-fixed-variant": "#0039b3",
+          "neg-tint": "#FDECEC"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "margin": "1rem",
+          "space-md": "0.75rem",
+          "gutter-desktop": "1.5rem",
+          "space-sm": "0.5rem",
+          "margin-desktop": "2rem",
+          "gutter": "1rem",
+          "space-lg": "1rem",
+          "space-xl": "1.5rem"
+        },
+        "fontFamily": {
+          "title-md": [
+            "Manrope"
+          ],
+          "body-base": [
+            "Manrope"
+          ],
+          "headline-xl-mobile": [
+            "Manrope"
+          ],
+          "label-xs": [
+            "Manrope"
+          ],
+          "headline-xl": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ],
+          "label-xs-bold": [
+            "Manrope"
+          ],
+          "body-base-medium": [
+            "Manrope"
+          ]
+        },
+        "fontSize": {
+          "title-md": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-base": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl-mobile": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-xs": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-xl": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-xs-bold": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-base-medium": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  };</script></head><body class="bg-canvas font-body-base text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface border-r border-border-subtle z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-md border-b border-border-subtle"><div class="w-9 h-9 rounded-lg bg-primary-700 flex items-center justify-center text-on-primary font-headline-xl text-headline-xl font-bold tracking-tight">PM</div><div class="flex flex-col min-w-0"><span class="font-body-base-medium text-body-base-medium text-ink-900 leading-tight truncate font-bold">Pantau Media</span><span class="font-label-xs text-label-xs text-ink-500 uppercase tracking-wider font-semibold">Platform OSINT</span></div></div><div class="py-space-md px-space-sm"><div class="px-space-md py-space-xs font-label-xs-bold text-label-xs-bold text-ink-500 uppercase tracking-wider">Pimpinan</div><nav class="space-y-0.5 mt-1" data-active-classes="bg-surface-container-high text-primary-700 border-l-[3px] border-primary-600 font-semibold"><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="jejaring-aktor" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">hub</span><span>Jejaring Aktor</span></a></nav><div class="mt-space-md pt-space-sm border-t border-border-subtle"><div class="px-space-md py-space-xs font-label-xs-bold text-label-xs-bold text-ink-500 uppercase tracking-wider">Administrasi</div><nav class="space-y-0.5 mt-1" data-active-classes="bg-surface-container-high text-primary-700 border-l-[3px] border-primary-600 font-semibold"><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="status-sistem" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">dns</span><span>Status Sistem</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="sumber-rss" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">rss_feed</span><span>Sumber RSS</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="media-sosial" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">share</span><span>Media Sosial</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="koneksi-x" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">tag</span><span>Koneksi X</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="kamus-alias" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">spellcheck</span><span>Kamus Alias</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-2 rounded transition-colors bg-surface-container-high text-primary-700 border-l-[3px] border-primary-600 font-semibold" data-path="pengguna" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">group</span><span>Pengguna</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors border-l-[3px] border-transparent" data-path="audit-log" href="#"><span class="material-symbols-outlined text-[18px] text-ink-500">history</span><span>Audit Log</span></a></nav></div></div></div><div class="p-space-md mt-space-sm"><div class="rounded-2xl p-3 text-on-primary shadow-sm" style="background: linear-gradient(165deg, #1B45C2, #10245F);"><div class="flex items-center justify-between mb-2"><span class="font-label-xs-bold text-label-xs-bold tracking-tight text-white">Kesegaran Data</span><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">sync</span></div><div class="space-y-1.5 font-label-xs text-label-xs"><div class="flex items-center justify-between text-surface-container-high"><span>Berita</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-surface"></span><span class="text-white font-medium">Aktif</span></div></div><div class="flex items-center justify-between text-surface-container-high"><span>X (Twitter)</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span><span class="text-tertiary-fixed font-medium">Terlambat</span></div></div><div class="flex items-center justify-between text-surface-container-high"><span>Instagram</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-surface"></span><span class="text-white font-medium">Aktif</span></div></div><div class="flex items-center justify-between text-surface-container-high"><span>Threads</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-surface"></span><span class="text-white font-medium">Aktif</span></div></div></div></div><div class="mt-2 px-1 text-center"><a class="font-label-xs text-label-xs text-ink-500 hover:text-primary-700 transition-colors inline-flex items-center gap-1" data-path="dokumentasi-data" href="#"><span>Cara membaca data</span><span class="material-symbols-outlined text-[14px]">help_outline</span></a></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-16 bg-surface border-b border-border-subtle z-40 px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><button aria-label="Toggle Sidebar" class="w-9 h-9 rounded-lg flex items-center justify-center text-ink-600 hover:bg-surface-sunken hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">menu</span></button><div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-sunken border border-border-subtle font-label-xs text-label-xs text-ink-700"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-medium">1 sumber terlambat (X)</span></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifikasi Admin" class="relative w-9 h-9 rounded-lg flex items-center justify-center text-ink-600 hover:bg-surface-sunken hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-neg ring-2 ring-surface"></span></button><div class="h-5 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-xs-bold text-label-xs-bold shadow-sm"><span>AS</span></div><div class="hidden md:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-ink-900 leading-tight">Admin Sektor</span><span class="font-label-xs text-label-xs text-ink-500">Super Admin</span></div></div></div></header><main class="relative pt-16 bg-canvas min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Skenario Manajemen Pengguna Latar Belakang (Redup di balik modal scrim) -->
+<div aria-hidden="true" class="w-full px-gutter-desktop py-space-xl flex flex-col gap-space-lg select-none pointer-events-none">
+<!-- Header Bagian Operasional -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs text-ink-500 uppercase tracking-wider">
+<span>Administrasi</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary-700 font-semibold">Manajemen Pengguna</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-ink-900 mt-1">Daftar Pengguna &amp; Otoritas Akses</h1>
+<p class="font-body-base text-body-base text-ink-600 mt-0.5">Kelola identitas personel analitis, kredensial peran, dan terminasi sesi terpadu.</p>
+</div>
+<div class="flex items-center gap-space-md">
+<button class="inline-flex items-center gap-space-sm px-4 py-2 rounded bg-surface border border-border-subtle text-ink-700 font-body-sm text-body-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-ink-500">file_download</span>
+<span>Ekspor Data</span>
+</button>
+<button class="inline-flex items-center gap-space-sm px-4 py-2 rounded bg-primary-600 text-on-primary font-body-sm text-body-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Tambah Pengguna</span>
+</button>
+</div>
+</div>
+<!-- Metrik Cepat -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg">
+<div class="bg-surface rounded-xl p-space-lg border border-border-subtle flex flex-col gap-1 shadow-sm">
+<span class="font-label-xs text-label-xs text-ink-500 uppercase font-semibold">Total Pengguna</span>
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">42</span>
+<span class="font-label-xs text-label-xs text-ink-500 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-600"></span> 5 Instansi Mitra
+        </span>
+</div>
+<div class="bg-surface rounded-xl p-space-lg border border-border-subtle flex flex-col gap-1 shadow-sm">
+<span class="font-label-xs text-label-xs text-ink-500 uppercase font-semibold">Sesi Aktif</span>
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">18</span>
+<span class="font-label-xs text-label-xs text-ink-500 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Telemetri Real-time
+        </span>
+</div>
+<div class="bg-surface rounded-xl p-space-lg border border-border-subtle flex flex-col gap-1 shadow-sm">
+<span class="font-label-xs text-label-xs text-ink-500 uppercase font-semibold">Tingkat Akses Pimpinan</span>
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">6</span>
+<span class="font-label-xs text-label-xs text-ink-500">Otoritas Eksekutif Utama</span>
+</div>
+<div class="bg-surface rounded-xl p-space-lg border border-border-subtle flex flex-col gap-1 shadow-sm">
+<span class="font-label-xs text-label-xs text-ink-500 uppercase font-semibold">Ditangguhkan / Pasif</span>
+<span class="font-headline-xl text-headline-xl text-neg font-bold">2</span>
+<span class="font-label-xs text-label-xs text-ink-500">Akses dibekukan</span>
+</div>
+</div>
+<!-- Tabel Pengguna Latar Belakang -->
+<div class="bg-surface rounded-xl border border-border-subtle overflow-hidden shadow-sm">
+<div class="p-space-lg border-b border-border-subtle flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface">
+<div class="flex items-center gap-space-md w-full md:w-96">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-ink-500">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-sunken border border-border-control rounded font-body-sm text-body-sm text-ink-900 focus:outline-none" placeholder="Cari nama, email, atau peran..." readonly="" type="text" value="dewi.lestari"/>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-xs text-label-xs text-ink-500">Filter Peran:</span>
+<span class="px-3 py-1 rounded-full bg-surface-sunken border border-border-subtle font-label-xs text-label-xs text-ink-700 font-medium">Semua Peran</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-sunken border-b border-border-subtle">
+<th class="py-3 px-space-lg font-label-xs-bold text-label-xs-bold text-ink-500 uppercase tracking-wider">Identitas Pengguna</th>
+<th class="py-3 px-space-lg font-label-xs-bold text-label-xs-bold text-ink-500 uppercase tracking-wider">Peran &amp; Akses</th>
+<th class="py-3 px-space-lg font-label-xs-bold text-label-xs-bold text-ink-500 uppercase tracking-wider">Status &amp; Sesi</th>
+<th class="py-3 px-space-lg font-label-xs-bold text-label-xs-bold text-ink-500 uppercase tracking-wider">Aktivitas Terakhir</th>
+<th class="py-3 px-space-lg font-label-xs-bold text-label-xs-bold text-ink-500 uppercase tracking-wider text-right">Tindakan</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-sm text-body-sm">
+<tr class="bg-surface-container-high/40">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-9 h-9 rounded-full bg-primary-700 text-on-primary flex items-center justify-center font-bold text-[13px]">DL</div>
+<div class="flex flex-col">
+<span class="font-semibold text-ink-900 leading-tight">Dra. Dewi Lestari, M.Si</span>
+<span class="font-label-xs text-label-xs text-ink-500">@dewi.lestari • dewi.lestari@kemenko.go.id</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-lg">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container border border-border-subtle font-label-xs-bold text-label-xs-bold text-primary-700">Pimpinan Instansi</span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-ink-900 font-medium">Aktif</span>
+<span class="font-label-xs text-label-xs text-ink-500">(1 perangkat)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-lg text-ink-600">4 menit lalu (Komp. Graha OSINT)</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded bg-neg-tint text-neg font-semibold text-body-sm">
+<span class="material-symbols-outlined text-[18px]">person_off</span>
+</span>
+</td>
+</tr>
+<tr class="bg-surface opacity-60">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-9 h-9 rounded-full bg-ink-700 text-on-primary flex items-center justify-center font-bold text-[13px]">BH</div>
+<div class="flex flex-col">
+<span class="font-semibold text-ink-900 leading-tight">Bambang Haryo, S.Kom</span>
+<span class="font-label-xs text-label-xs text-ink-500">@bambang.h • b.haryo@analis.gov.id</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-lg">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-sunken border border-border-subtle font-label-xs text-label-xs text-ink-700">Analis Siber Madya</span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-ink-900 font-medium">Aktif</span>
+</div>
+</td>
+<td class="py-3.5 px-space-lg text-ink-600">12 menit lalu</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="material-symbols-outlined text-[20px] text-ink-500">more_vert</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- BACKDROP SCRIM: rgb(15 23 41 / 40%) sesuai Prinsip 3 poin 5 & DESIGN.md -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4" style="background-color: rgba(15, 23, 41, 0.40); backdrop-filter: blur(2px);">
+<!-- DIALOG KONFIRMASI DESTRUKTIF: Lebar 460px, radius 24px (radius-xl), border 1px #E6E9F0, padding 28px -->
+<div aria-describedby="dialog-desc" aria-labelledby="dialog-title" aria-modal="true" class="w-full max-w-[460px] bg-surface rounded-[24px] border border-border-subtle p-[28px] flex flex-col gap-space-lg relative text-left" role="alertdialog" style="box-shadow: 0 20px 35px -5px rgba(15, 23, 41, 0.16), 0 10px 15px -5px rgba(15, 23, 41, 0.08);">
+<!-- Header Dialog: Ikon Peringatan Destruktif -->
+<div class="flex items-start gap-space-lg">
+<!-- Lingkaran merah muda #FDECEC ukuran 48px dengan ikon merah koral #C2262E -->
+<div class="w-12 h-12 rounded-full bg-neg-tint flex items-center justify-center shrink-0" style="background-color: #FDECEC;">
+<span class="material-symbols-outlined text-[26px] text-neg-text" style="color: #C2262E; font-variation-settings: 'wght' 500;">
+            person_cancel
+          </span>
+</div>
+<div class="flex flex-col min-w-0 pt-0.5">
+<!-- Judul Dialog: title-lg, 20px font-weight 700, #0F1729 -->
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-ink-900 leading-tight" id="dialog-title" style="color: #0F1729; font-size: 20px; line-height: 26px;">
+            Nonaktifkan pengguna?
+          </h2>
+<span class="font-label-xs-bold text-label-xs-bold text-neg-text uppercase tracking-wider mt-1" style="color: #C2262E;">
+            Tindakan Destruktif Langsung
+          </span>
+</div>
+</div>
+<!-- Penjelasan Dampak Sesuai Spesifikasi Alur J8 langkah 5 -->
+<div class="flex flex-col gap-2" id="dialog-desc">
+<p class="font-body-base-medium text-body-base-medium font-semibold text-ink-900 leading-[22px]">
+          Pengguna ini tidak akan bisa masuk dan sesinya langsung diakhiri.
+        </p>
+<p class="font-body-base text-body-base text-ink-600 leading-[22px]" style="color: #566075; font-size: 14px;">
+          Akun <strong class="text-ink-900 font-semibold">@dewi.lestari</strong> (Pimpinan) akan ditangguhkan seketika. Riwayat aktivitas dan log akses pengguna ini tetap tersimpan di dalam Audit Log sistem.
+        </p>
+</div>
+<!-- Kotak Rincian Akun yang Ditargetkan (latar #F7F8FB, border 1px #E6E9F0, radius 12px, padding 12px 16px) -->
+<div class="bg-surface-sunken border border-border-subtle rounded-xl p-[12px_16px] flex flex-col gap-2.5" style="background-color: #F7F8FB; border-color: #E6E9F0;">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-ink-500 font-medium">Nama pengguna</span>
+<span class="font-semibold text-ink-900 font-mono text-[13px]">dewi.lestari</span>
+</div>
+<div class="h-px w-full bg-border-subtle"></div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-ink-500 font-medium">Nama lengkap</span>
+<span class="font-semibold text-ink-900">Dra. Dewi Lestari, M.Si</span>
+</div>
+<div class="h-px w-full bg-border-subtle"></div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-ink-500 font-medium">Peran</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface border border-border-subtle font-label-xs-bold text-label-xs-bold text-ink-900">
+            Pimpinan Instansi
+          </span>
+</div>
+<div class="h-px w-full bg-border-subtle"></div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-ink-500 font-medium">Sesi aktif</span>
+<span class="inline-flex items-center gap-1.5 font-label-xs-bold text-label-xs-bold text-neg-text">
+<span class="w-2 h-2 rounded-full bg-neg animate-pulse"></span>
+<span>1 perangkat (diputus segera)</span>
+</span>
+</div>
+</div>
+<!-- Tombol Aksi di Bagian Bawah: Sesuai aturan ConfirmDialog (Tombol default sekunder 'Batal') -->
+<div class="flex items-center justify-end gap-space-md pt-2 mt-1">
+<!-- 1. Tombol default sekunder 'Batal' (#FFFFFF, border 1.5px #8C95A8, radius 10px, padding 10px 18px, font-weight 600, teks #0F1729) -->
+<button autofocus="" class="inline-flex items-center justify-center px-[18px] py-[10px] rounded-[10px] bg-surface border-[1.5px] border-border-control text-ink-900 font-body-base-medium text-body-base-medium font-semibold hover:bg-surface-sunken focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 transition-all shadow-sm" id="btn-cancel-deactivate" style="border-color: #8C95A8; color: #0F1729;" type="button">
+          Batal
+        </button>
+<!-- 2. Tombol merah destruktif 'Nonaktifkan pengguna' (latar merah #C2262E, hover #9F1D24, teks putih, radius 10px, padding 10px 18px) -->
+<button class="inline-flex items-center justify-center gap-2 px-[18px] py-[10px] rounded-[10px] text-on-primary font-body-base-medium text-body-base-medium font-semibold focus:outline-none focus:ring-2 focus:ring-neg focus:ring-offset-2 transition-colors shadow-sm" id="btn-confirm-deactivate" onmouseout="this.style.backgroundColor='#C2262E'" onmouseover="this.style.backgroundColor='#9F1D24'" style="background-color: #C2262E;" type="button">
+<span class="material-symbols-outlined text-[18px]">person_off</span>
+<span>Nonaktifkan pengguna</span>
+</button>
+</div>
+<!-- Indikator Audit Log Otomatis di Footer Dialog -->
+<div class="flex items-center justify-center gap-1.5 pt-1 text-center font-label-xs text-label-xs text-ink-500">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Aksi ini akan dicatat permanen dalam Audit Log ID #ACT-9082</span>
+</div>
+</div>
+</div>
+<script>
+    // Penanganan interaksi dialog konfirmasi
+    (function() {
+      const cancelBtn = document.getElementById('btn-cancel-deactivate');
+      const confirmBtn = document.getElementById('btn-confirm-deactivate');
+
+      if (cancelBtn) {
+        cancelBtn.addEventListener('click', function() {
+          const dialogBackdrop = cancelBtn.closest('.fixed');
+          if (dialogBackdrop) {
+            dialogBackdrop.style.transition = 'opacity 0.2s ease';
+            dialogBackdrop.style.opacity = '0';
+            setTimeout(() => {
+              dialogBackdrop.remove();
+            }, 200);
+          }
+        });
+      }
+
+      if (confirmBtn) {
+        confirmBtn.addEventListener('click', function() {
+          confirmBtn.disabled = true;
+          confirmBtn.innerHTML = `
+            <span class="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+            <span>Memutuskan sesi...</span>
+          `;
+          setTimeout(() => {
+            const dialogBackdrop = confirmBtn.closest('.fixed');
+            if (dialogBackdrop) {
+              dialogBackdrop.innerHTML = `
+                <div class="w-full max-w-[420px] bg-surface rounded-[24px] border border-border-subtle p-[28px] flex flex-col items-center text-center gap-3 shadow-2xl">
+                  <div class="w-12 h-12 rounded-full bg-neg-tint text-neg-text flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[28px]">check_circle</span>
+                  </div>
+                  <h3 class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-ink-900">Pengguna Dinonaktifkan</h3>
+                  <p class="font-body-base text-body-base text-ink-600">Sesi @dewi.lestari berhasil diputus seketika dan status akun beralih ke Nonaktif.</p>
+                  <button type="button" onclick="this.closest('.fixed').remove()" class="mt-2 px-6 py-2 rounded-[10px] bg-primary-600 text-white font-semibold text-body-sm">Selesai</button>
+                </div>
+              `;
+            }
+          }, 800);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

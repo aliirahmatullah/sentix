@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-dim": "#d2d9f3",
+          "on-secondary-container": "#5a647a",
+          "surface-container": "#e9edff",
+          "primary": "#003ec1",
+          "outline": "#747686",
+          "inverse-surface": "#283043",
+          "error": "#ba1a1a",
+          "on-tertiary-fixed-variant": "#802900",
+          "primary-container": "#2457e6",
+          "neg-text": "#C2262E",
+          "primary-600": "#2457E6",
+          "on-primary": "#ffffff",
+          "on-primary-fixed-variant": "#0039b3",
+          "on-tertiary": "#ffffff",
+          "surface-bright": "#faf8ff",
+          "tertiary-fixed-dim": "#ffb59a",
+          "on-secondary-fixed-variant": "#3d475b",
+          "on-error-container": "#93000a",
+          "primary-fixed": "#dce1ff",
+          "inverse-primary": "#b7c4ff",
+          "surface-sunken": "#F7F8FB",
+          "surface-container-lowest": "#ffffff",
+          "surface-tint": "#1850df",
+          "on-surface": "#131b2d",
+          "background": "#faf8ff",
+          "ink-500": "#6B7488",
+          "secondary-fixed": "#d8e2fc",
+          "ink-600": "#566075",
+          "error-container": "#ffdad6",
+          "on-tertiary-fixed": "#380d00",
+          "on-error": "#ffffff",
+          "primary-fixed-dim": "#b7c4ff",
+          "surface-variant": "#dbe2fb",
+          "surface": "#FFFFFF",
+          "secondary-fixed-dim": "#bcc6df",
+          "ink-900": "#0F1729",
+          "outline-variant": "#c4c5d8",
+          "on-background": "#131b2d",
+          "surface-container-low": "#f2f3ff",
+          "tertiary-container": "#b33d00",
+          "on-secondary": "#ffffff",
+          "on-secondary-fixed": "#111c2e",
+          "surface-container-highest": "#dbe2fb",
+          "secondary": "#545f74",
+          "border-subtle": "#E6E9F0",
+          "on-surface-variant": "#434655",
+          "inverse-on-surface": "#edf0ff",
+          "on-tertiary-container": "#ffdbcf",
+          "tertiary": "#8b2d00",
+          "ink-700": "#3B4559",
+          "border-control": "#8C95A8",
+          "tertiary-fixed": "#ffdbcf",
+          "surface-container-high": "#e1e8ff",
+          "secondary-container": "#d8e2fc",
+          "on-primary-container": "#dce1ff",
+          "on-primary-fixed": "#001551",
+          "neg": "#E5484D",
+          "canvas": "#F3F5F9",
+          "neg-tint": "#FDECEC",
+          "primary-700": "#1B45C2"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-xl": "1.5rem",
+          "gutter": "1rem",
+          "margin-desktop": "2rem",
+          "space-md": "0.75rem",
+          "space-xs": "0.25rem",
+          "margin": "1rem",
+          "gutter-desktop": "1.5rem",
+          "space-lg": "1rem"
+        },
+        "fontFamily": {
+          "label-xs": [
+            "Manrope"
+          ],
+          "title-md": [
+            "Manrope"
+          ],
+          "body-base": [
+            "Manrope"
+          ],
+          "label-xs-bold": [
+            "Manrope"
+          ],
+          "body-base-medium": [
+            "Manrope"
+          ],
+          "headline-xl-mobile": [
+            "Manrope"
+          ],
+          "headline-xl": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ]
+        },
+        "fontSize": {
+          "label-xs": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "title-md": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-base": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "label-xs-bold": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-base-medium": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-xl-mobile": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-xl": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-canvas text-on-surface font-body-base text-body-base min-h-screen"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-7 h-7 rounded-lg bg-primary-600 flex items-center justify-center text-on-primary font-headline-xl text-headline-xl leading-none"><span class="material-symbols-outlined text-[18px]">radar</span></div><div><div class="font-headline-xl text-[14px] leading-tight text-ink-900 tracking-tight">Pantau Media</div><div class="font-label-xs-bold text-[10px] text-primary-600 tracking-wider">PLATFORM OSINT</div></div></div><nav class="flex flex-col py-space-sm" data-active-classes="bg-surface-container text-primary-700 font-body-base-medium border-l-[3px] border-primary-600 pl-[calc(1rem-3px)]"><div class="px-space-lg pt-space-md pb-space-xs font-label-xs-bold text-label-xs text-ink-500 uppercase tracking-wider">Pimpinan</div><a class="flex items-center gap-space-sm px-space-lg py-space-sm text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-lg py-space-sm text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="jejaring-aktor" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Jejaring Aktor</span></a><div class="px-space-lg pt-space-lg pb-space-xs font-label-xs-bold text-label-xs text-ink-500 uppercase tracking-wider">Administrasi</div><a class="flex items-center gap-space-sm px-space-lg py-space-sm text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="status-sistem" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>Status Sistem</span></a><a class="flex items-center gap-space-sm px-space-lg py-space-sm text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="sumber-rss" href="#"><span class="material-symbols-outlined text-[18px]">rss_feed</span><span>Sumber RSS</span></a><a class="flex items-center gap-space-sm px-space-lg py-space-sm text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="media-sosial" href="#"><span class="material-symbols-outlined text-[18px]">public</span><span>Media Sosial</span></a><a class="flex items-center gap-space-sm px-space-lg py-space-sm text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="koneksi-x" href="#"><span class="material-symbols-outlined text-[18px]">share</span><span>Koneksi X</span></a><a class="flex items-center gap-space-sm px-space-lg py-space-sm text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="kamus-alias" href="#"><span class="material-symbols-outlined text-[18px]">spellcheck</span><span>Kamus Alias</span></a><a class="flex items-center gap-space-sm px-space-lg py-space-sm text-ink-700 hover:bg-surface-sunken hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="pengguna" href="#"><span class="material-symbols-outlined text-[18px]">manage_accounts</span><span>Pengguna</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-lg py-space-sm transition-colors bg-surface-container text-primary-700 font-body-base-medium border-l-[3px] border-primary-600 pl-[calc(1rem-3px)]" data-path="audit-log" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Audit Log</span></a></nav></div><div class="p-space-md"><div class="rounded-lg bg-gradient-to-br from-primary-700 to-ink-900 p-space-md text-on-primary"><div class="flex items-center gap-space-xs font-label-xs-bold text-label-xs text-secondary-fixed"><span class="material-symbols-outlined text-[14px]">sync</span><span>Kesegaran Data</span></div><div class="font-headline-xl text-[13px] text-surface font-bold mt-space-xs">Sinkronisasi Realtime</div><div class="font-label-xs text-label-xs text-surface-container mt-space-xs leading-tight">99.8% feed terindeks stabil</div></div><div class="mt-space-sm text-center"><a class="font-label-xs text-label-xs text-ink-500 hover:text-primary-600 transition-colors inline-flex items-center gap-space-xs" href="#"><span>Cara membaca data</span><span class="material-symbols-outlined text-[12px]">arrow_forward</span></a></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-sunken rounded-full text-ink-700 font-label-xs text-label-xs"><span class="w-2 h-2 rounded-full bg-primary-600 animate-pulse"></span><span>Semua sumber terkini · diperbarui 09:42 WIB</span></div></div><div class="flex items-center gap-space-lg"><button aria-label="Notifikasi Admin" class="relative p-space-xs rounded-lg text-ink-600 hover:bg-surface-sunken hover:text-ink-900 transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-neg"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-body-base-medium text-body-sm text-ink-900 leading-none">Admin Sektor</span><span class="font-label-xs text-label-xs text-ink-500 mt-0.5 leading-none">Super Admin</span></div></div></div></header><main class="relative pt-16 bg-canvas min-h-screen"><div class="flex flex-col w-full">
+<div class="p-margin-desktop flex flex-col gap-space-xl">
+<!-- Header Halaman (HANYA BACA, TANPA TOMBOL AKSI UTAMA) -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-ink-600 text-[26px]">receipt_long</span>
+<h1 class="font-headline-xl text-headline-xl text-ink-900 tracking-tight">Audit log</h1>
+</div>
+<p class="font-body-sm text-body-sm text-ink-600 mt-space-xs leading-relaxed">
+          Rekaman jejak aktivitas pengguna dan operasi sistem yang bersifat append-only untuk kepatuhan dan integritas tata kelola keamanan.
+        </p>
+</div>
+<!-- Badge Status Kepatuhan & Imutabilitas (Netral & Informatif, Bukan CTA) -->
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-sunken text-ink-700 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary-600">verified_user</span>
+<span class="font-label-xs-bold text-label-xs">Penyimpanan Kriptografis SHA-256</span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-sunken text-ink-600 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-600"></span>
+<span class="font-label-xs text-label-xs font-semibold">Append-only Imutabel</span>
+</div>
+</div>
+</div>
+<!-- Ringkasan KPI Audit Log (4 Kartu Telemetri Pengawasan) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- KPI 1 -->
+<div class="bg-surface rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-ink-500 uppercase tracking-wider">Total Log 365 Hari</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-600">
+<span class="material-symbols-outlined text-[18px]">data_table</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">14.892</span>
+<span class="font-label-xs text-label-xs text-ink-500">rekaman</span>
+</div>
+<div class="mt-space-xs flex items-center gap-space-xs text-ink-500 font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span>Siklus retensi 1 tahun penuh</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-ink-500 uppercase tracking-wider">Kejadian Sensitif</span>
+<div class="w-8 h-8 rounded-lg bg-neg-tint flex items-center justify-center text-neg-text">
+<span class="material-symbols-outlined text-[18px]">security_update_warning</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">48</span>
+<span class="font-label-xs text-label-xs text-ink-500">kejadian</span>
+</div>
+<div class="mt-space-xs flex items-center gap-space-xs text-ink-500 font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Perubahan akses &amp; rotasi kredensial</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-ink-500 uppercase tracking-wider">Aktor Aktif</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-700">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">4</span>
+<span class="font-label-xs text-label-xs text-ink-500">akun terotorisasi</span>
+</div>
+<div class="mt-space-xs flex items-center gap-space-xs text-ink-500 font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>3 Admin/Pimpinan + 1 Sistem Cron</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-ink-500 uppercase tracking-wider">Status Integritas</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-600">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">Terverifikasi</span>
+<span class="font-label-xs text-label-xs text-ink-500">Utuh</span>
+</div>
+<div class="mt-space-xs flex items-center gap-space-xs text-ink-500 font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[14px] text-primary-600">lock_clock</span>
+<span>Merkle-tree block hash valid</span>
+</div>
+</div>
+</div>
+<!-- Kartu Konten Utama: Audit Log Container -->
+<div class="bg-surface rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<!-- Toolbar Audit Log: Pencarian & Filter Multi-Parameter -->
+<div class="p-space-lg bg-surface flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Omnibar Search Bar Input (Sesuai Gaya Design System) -->
+<div class="relative flex-1 max-w-xl">
+<div class="absolute inset-y-0 left-0 pl-space-md flex items-center pointer-events-none text-ink-500">
+<span class="material-symbols-outlined text-[18px]">search</span>
+</div>
+<input class="w-full bg-surface-sunken text-ink-900 placeholder-ink-500 font-body-base text-body-base rounded-full py-space-sm pl-10 pr-14 outline-none focus:bg-surface focus:shadow-sm transition-all" placeholder="Cari kata kunci target, ID, atau IP..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-space-md flex items-center pointer-events-none">
+<kbd class="px-1.5 py-0.5 text-[10px] font-semibold text-ink-500 bg-surface rounded shadow-sm">⌘K</kbd>
+</div>
+</div>
+<!-- Keterangan Jumlah Log -->
+<div class="text-right">
+<span class="font-label-xs text-label-xs text-ink-600 bg-surface-sunken px-space-md py-space-xs rounded-full">
+              Menampilkan <strong class="text-ink-900 font-semibold">8</strong> dari <strong class="text-ink-900 font-semibold">14.892</strong> catatan audit
+            </span>
+</div>
+</div>
+<!-- Filter Controls Bar -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<!-- Filter Aktor -->
+<div class="relative">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-sunken hover:bg-surface-container rounded-lg font-body-sm text-body-sm text-ink-700 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-ink-500">person</span>
+<span>Aktor: <strong>Semua</strong></span>
+<span class="material-symbols-outlined text-[16px] text-ink-500 ml-space-xs">expand_more</span>
+</button>
+</div>
+<!-- Filter Aksi -->
+<div class="relative">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-sunken hover:bg-surface-container rounded-lg font-body-sm text-body-sm text-ink-700 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-ink-500">bolt</span>
+<span>Aksi: <strong>Semua</strong></span>
+<span class="material-symbols-outlined text-[16px] text-ink-500 ml-space-xs">expand_more</span>
+</button>
+</div>
+<!-- Filter Rentang Tanggal -->
+<div class="relative">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-sunken hover:bg-surface-container rounded-lg font-body-sm text-body-sm text-ink-700 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-ink-500">calendar_today</span>
+<span>Rentang: <strong>7 hari terakhir (6–12 Nov 2026)</strong></span>
+<span class="material-symbols-outlined text-[16px] text-ink-500 ml-space-xs">expand_more</span>
+</button>
+</div>
+<!-- Reset Filter -->
+<button class="inline-flex items-center gap-space-xs px-space-sm py-space-xs text-ink-500 hover:text-ink-900 font-label-xs text-label-xs transition-colors ml-auto" title="Atur Ulang Filter" type="button">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span>Atur Ulang Filter</span>
+</button>
+</div>
+</div>
+<!-- Tabel Audit Log (Tinggi baris 52px, header lengket #F7F8FB, font Manrope konsisten tanpa monospace) -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-sunken sticky top-0 z-10 text-ink-500 font-label-xs-bold text-label-xs uppercase tracking-wider select-none">
+<th class="py-space-sm px-space-lg font-semibold" scope="col">Waktu (WIB)</th>
+<th class="py-space-sm px-space-lg font-semibold" scope="col">Aktor</th>
+<th class="py-space-sm px-space-lg font-semibold" scope="col">Aksi</th>
+<th class="py-space-sm px-space-lg font-semibold" scope="col">Target Entitas</th>
+<th class="py-space-sm px-space-lg font-semibold" scope="col">Alamat IP</th>
+<th class="py-space-sm px-space-lg font-semibold" scope="col">User-Agent Klien</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-sunken font-body-base text-body-base text-ink-900">
+<!-- Baris 1: Nonaktifkan pengguna -->
+<tr class="h-[52px] hover:bg-surface-sunken transition-colors">
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-700 font-body-sm text-body-sm">
+                12 Nov 2026 <span class="text-ink-500">09:40:18</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-base-medium text-body-sm text-ink-900">ahmad.fauzi</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container text-primary-700 uppercase">Admin</span>
+</div>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-neg-tint text-neg-text font-label-xs-bold text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-neg"></span>
+                  Nonaktifkan pengguna
+                </span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="font-body-base-medium text-body-sm text-ink-900 bg-surface-sunken px-2 py-0.5 rounded">user:dewi.lestari</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-600 font-body-sm text-body-sm">
+                10.14.82.5
+              </td>
+<td class="px-space-lg py-space-sm max-w-xs text-ink-500 font-body-sm text-body-sm truncate" title="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36">
+                Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+              </td>
+</tr>
+<!-- Baris 2: Simpan sesi X -->
+<tr class="h-[52px] hover:bg-surface-sunken transition-colors">
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-700 font-body-sm text-body-sm">
+                12 Nov 2026 <span class="text-ink-500">09:35:42</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-base-medium text-body-sm text-ink-900">ahmad.fauzi</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container text-primary-700 uppercase">Admin</span>
+</div>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-primary-700 font-label-xs-bold text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-600"></span>
+                  Simpan sesi X
+                </span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="font-body-base-medium text-body-sm text-ink-900 bg-surface-sunken px-2 py-0.5 rounded">session:x_conn_live</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-600 font-body-sm text-body-sm">
+                10.14.82.5
+              </td>
+<td class="px-space-lg py-space-sm max-w-xs text-ink-500 font-body-sm text-body-sm truncate" title="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36">
+                Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+              </td>
+</tr>
+<!-- Baris 3: Tambah alias -->
+<tr class="h-[52px] hover:bg-surface-sunken transition-colors">
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-700 font-body-sm text-body-sm">
+                12 Nov 2026 <span class="text-ink-500">09:15:04</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-base-medium text-body-sm text-ink-900">ahmad.fauzi</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container text-primary-700 uppercase">Admin</span>
+</div>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-sunken text-ink-700 font-label-xs-bold text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-ink-500"></span>
+                  Tambah alias
+                </span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="font-body-base-medium text-body-sm text-ink-900 bg-surface-sunken px-2 py-0.5 rounded">alias:Jokowi → Joko Widodo</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-600 font-body-sm text-body-sm">
+                10.14.82.5
+              </td>
+<td class="px-space-lg py-space-sm max-w-xs text-ink-500 font-body-sm text-body-sm truncate" title="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36">
+                Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+              </td>
+</tr>
+<!-- Baris 4: Login berhasil -->
+<tr class="h-[52px] hover:bg-surface-sunken transition-colors">
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-700 font-body-sm text-body-sm">
+                12 Nov 2026 <span class="text-ink-500">08:50:29</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-base-medium text-body-sm text-ink-900">hendra.setiawan</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-sunken text-ink-700 uppercase">Pimpinan</span>
+</div>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-primary-700 font-label-xs-bold text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-600"></span>
+                  Login berhasil
+                </span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="font-body-base-medium text-body-sm text-ink-900 bg-surface-sunken px-2 py-0.5 rounded">auth:session_create</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-600 font-body-sm text-body-sm">
+                10.14.80.19
+              </td>
+<td class="px-space-lg py-space-sm max-w-xs text-ink-500 font-body-sm text-body-sm truncate" title="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36">
+                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36...
+              </td>
+</tr>
+<!-- Baris 5: Tambah pengguna -->
+<tr class="h-[52px] hover:bg-surface-sunken transition-colors">
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-700 font-body-sm text-body-sm">
+                11 Nov 2026 <span class="text-ink-500">16:22:15</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-base-medium text-body-sm text-ink-900">ahmad.fauzi</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container text-primary-700 uppercase">Admin</span>
+</div>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-primary-700 font-label-xs-bold text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-600"></span>
+                  Tambah pengguna
+                </span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="font-body-base-medium text-body-sm text-ink-900 bg-surface-sunken px-2 py-0.5 rounded">user:siti.nurhaliza</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-600 font-body-sm text-body-sm">
+                10.14.82.5
+              </td>
+<td class="px-space-lg py-space-sm max-w-xs text-ink-500 font-body-sm text-body-sm truncate" title="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36">
+                Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+              </td>
+</tr>
+<!-- Baris 6: Ubah sumber RSS -->
+<tr class="h-[52px] hover:bg-surface-sunken transition-colors">
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-700 font-body-sm text-body-sm">
+                11 Nov 2026 <span class="text-ink-500">14:10:02</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-base-medium text-body-sm text-ink-900">ahmad.fauzi</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container text-primary-700 uppercase">Admin</span>
+</div>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-xs-bold text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Ubah sumber RSS
+                </span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="font-body-base-medium text-body-sm text-ink-900 bg-surface-sunken px-2 py-0.5 rounded">rss:tempo_nasional</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-600 font-body-sm text-body-sm">
+                10.14.82.5
+              </td>
+<td class="px-space-lg py-space-sm max-w-xs text-ink-500 font-body-sm text-body-sm truncate" title="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36">
+                Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+              </td>
+</tr>
+<!-- Baris 7: Verifikasi MFA -->
+<tr class="h-[52px] hover:bg-surface-sunken transition-colors">
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-700 font-body-sm text-body-sm">
+                10 Nov 2026 <span class="text-ink-500">18:05:40</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-base-medium text-body-sm text-ink-900">dewi.lestari</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-sunken text-ink-700 uppercase">Pimpinan</span>
+</div>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-primary-700 font-label-xs-bold text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-600"></span>
+                  Verifikasi MFA
+                </span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="font-body-base-medium text-body-sm text-ink-900 bg-surface-sunken px-2 py-0.5 rounded">totp:verify_step</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-600 font-body-sm text-body-sm">
+                10.14.85.44
+              </td>
+<td class="px-space-lg py-space-sm max-w-xs text-ink-500 font-body-sm text-body-sm truncate" title="Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Mobile/15E148 Safari/604.1">
+                Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X)...
+              </td>
+</tr>
+<!-- Baris 8: Pembersihan otomatis -->
+<tr class="h-[52px] hover:bg-surface-sunken transition-colors">
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-700 font-body-sm text-body-sm">
+                10 Nov 2026 <span class="text-ink-500">11:30:12</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-base-medium text-body-sm text-ink-900">sistem.cron</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container-highest text-ink-700 uppercase">Sistem</span>
+</div>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-sunken text-ink-700 font-label-xs-bold text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-ink-500"></span>
+                  Pembersihan otomatis
+                </span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap">
+<span class="font-body-base-medium text-body-sm text-ink-900 bg-surface-sunken px-2 py-0.5 rounded">cron:purge_social_raw_90d</span>
+</td>
+<td class="px-space-lg py-space-sm whitespace-nowrap text-ink-600 font-body-sm text-body-sm">
+                10.14.80.1
+              </td>
+<td class="px-space-lg py-space-sm max-w-xs text-ink-500 font-body-sm text-body-sm truncate" title="Go-http-client/1.1 (Internal Agent)">
+                Go-http-client/1.1 (Internal Agent)
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer Kartu: Informasi Retensi & Pagination -->
+<div class="p-space-lg bg-surface-sunken flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<!-- Informasi Kepatuhan / Catatan Retensi -->
+<div class="flex items-start md:items-center gap-space-sm max-w-2xl text-ink-600">
+<span class="material-symbols-outlined text-[20px] text-ink-500 shrink-0">hourglass_top</span>
+<span class="font-label-xs text-label-xs leading-relaxed">
+            Log dirotasi setelah 365 hari. Berkas log historis diarsipkan ke media penyimpanan dingin (cold storage WORM) terenkripsi secara otomatis sesuai mandat audit regulasi.
+          </span>
+</div>
+<!-- Pagination Controls -->
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<!-- Baris per halaman -->
+<div class="flex items-center gap-space-xs text-ink-600 font-label-xs text-label-xs">
+<span>Baris per halaman:</span>
+<button class="inline-flex items-center gap-1 bg-surface px-space-sm py-1 rounded shadow-sm text-ink-900 font-medium hover:bg-surface-sunken transition-colors" type="button">
+<span>25</span>
+<span class="material-symbols-outlined text-[14px] text-ink-500">arrow_drop_down</span>
+</button>
+</div>
+<!-- Indikator Posisi -->
+<span class="font-label-xs text-label-xs text-ink-600 whitespace-nowrap">
+            1–8 dari 14.892 log
+          </span>
+<!-- Navigasi Tombol Pagination -->
+<div class="inline-flex items-center gap-1 bg-surface p-1 rounded-lg shadow-sm">
+<button aria-label="Halaman Sebelumnya" class="w-7 h-7 flex items-center justify-center rounded text-ink-500 opacity-40 cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-primary-600 text-on-primary font-label-xs-bold text-label-xs" type="button">
+              1
+            </button>
+<button class="w-7 h-7 flex items-center justify-center rounded text-ink-700 hover:bg-surface-sunken font-label-xs text-label-xs transition-colors" type="button">
+              2
+            </button>
+<button class="w-7 h-7 flex items-center justify-center rounded text-ink-700 hover:bg-surface-sunken font-label-xs text-label-xs transition-colors" type="button">
+              3
+            </button>
+<span class="px-1 text-ink-500 text-[10px]">...</span>
+<button class="w-7 h-7 flex items-center justify-center rounded text-ink-700 hover:bg-surface-sunken font-label-xs text-label-xs transition-colors" type="button">
+              596
+            </button>
+<button aria-label="Halaman Berikutnya" class="w-7 h-7 flex items-center justify-center rounded text-ink-700 hover:bg-surface-sunken transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

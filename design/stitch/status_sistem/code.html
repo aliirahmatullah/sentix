@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-dim":"#d2d9f3","on-secondary-fixed":"#111c2e","secondary":"#545f74","on-error-container":"#93000a","background":"#faf8ff","primary":"#003ec1","border-control":"#8C95A8","primary-fixed":"#dce1ff","ink-500":"#6B7488","border-subtle":"#E6E9F0","secondary-fixed-dim":"#bcc6df","error-container":"#ffdad6","on-primary-fixed":"#001551","inverse-primary":"#b7c4ff","on-background":"#131b2d","neg-tint":"#FDECEC","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","primary-fixed-dim":"#b7c4ff","error":"#ba1a1a","on-secondary-container":"#5a647a","outline-variant":"#c4c5d8","tertiary":"#8b2d00","on-primary":"#ffffff","on-primary-fixed-variant":"#0039b3","on-secondary-fixed-variant":"#3d475b","inverse-surface":"#283043","surface":"#FFFFFF","surface-container-high":"#e1e8ff","tertiary-fixed-dim":"#ffb59a","on-tertiary-fixed-variant":"#802900","ink-900":"#0F1729","on-secondary":"#ffffff","surface-container-highest":"#dbe2fb","on-surface-variant":"#434655","primary-container":"#2457e6","surface-container-low":"#f2f3ff","neg-text":"#C2262E","tertiary-container":"#b33d00","primary-600":"#2457E6","surface-variant":"#dbe2fb","secondary-fixed":"#d8e2fc","secondary-container":"#d8e2fc","ink-600":"#566075","surface-container":"#e9edff","on-surface":"#131b2d","on-tertiary-fixed":"#380d00","inverse-on-surface":"#edf0ff","on-primary-container":"#dce1ff","tertiary-fixed":"#ffdbcf","surface-bright":"#faf8ff","neg":"#E5484D","on-tertiary-container":"#ffdbcf","on-error":"#ffffff","outline":"#747686","canvas":"#F3F5F9","ink-700":"#3B4559","surface-tint":"#1850df","surface-sunken":"#F7F8FB","primary-700":"#1B45C2"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"1.5rem","gutter-desktop":"1.5rem","margin":"1rem","margin-desktop":"2rem","space-lg":"1rem","space-xs":"0.25rem","gutter":"1rem","space-sm":"0.5rem","space-md":"0.75rem"},fontFamily:{"body-sm":["Manrope"],"body-base-medium":["Manrope"],"title-md":["Manrope"],"body-base":["Manrope"],"headline-xl-mobile":["Manrope"],"label-xs":["Manrope"],"headline-xl":["Manrope"],"label-xs-bold":["Manrope"]},fontSize:{"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"500"}],"body-base-medium":["14px",{"lineHeight":"22px","letterSpacing":"0","fontWeight":"500"}],"title-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-base":["14px",{"lineHeight":"22px","letterSpacing":"0","fontWeight":"400"}],"headline-xl-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-xs":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-xs-bold":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-canvas font-body-base text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[240px] bg-surface border-r border-border-subtle z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-border-subtle"><div class="w-8 h-8 rounded-lg bg-primary-600 flex items-center justify-center text-on-primary font-headline-xl text-base font-bold shadow-sm">PM</div><div class="flex flex-col min-w-0"><span class="font-title-md text-body-base-medium font-bold text-ink-900 tracking-tight leading-tight truncate">Pantau Media</span><span class="font-label-xs text-[10px] text-ink-500 uppercase tracking-wider truncate">Platform Monitoring &amp; OSINT</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-xs text-ink-500 uppercase tracking-wider font-semibold">Pimpinan</div><nav class="space-y-1 mt-1" data-active-classes="bg-primary-fixed text-on-primary-fixed font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-ink-700 hover:bg-surface-sunken hover:text-ink-900 transition-colors font-body-sm" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-ink-700 hover:bg-surface-sunken hover:text-ink-900 transition-colors font-body-sm" data-path="jejaring-aktor" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Jejaring aktor</span></a></nav></div><div class="px-space-md py-space-xs"><div class="h-[1px] bg-border-subtle my-space-xs"></div><div class="px-space-sm py-space-xs font-label-xs text-[12px] font-semibold text-ink-500">Administrasi</div><nav class="space-y-1 mt-1" data-active-classes="bg-primary-fixed text-on-primary-fixed font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-primary-fixed text-on-primary-fixed font-semibold" data-path="status-sistem" href="#"><span class="material-symbols-outlined text-[18px]">dns</span><span>Status sistem</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-ink-700 hover:bg-surface-sunken hover:text-ink-900 transition-colors font-body-sm" data-path="sumber-rss" href="#"><span class="material-symbols-outlined text-[18px]">rss_feed</span><span>Sumber RSS</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-ink-700 hover:bg-surface-sunken hover:text-ink-900 transition-colors font-body-sm" data-path="media-sosial" href="#"><span class="material-symbols-outlined text-[18px]">share</span><span>Media sosial</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-ink-700 hover:bg-surface-sunken hover:text-ink-900 transition-colors font-body-sm" data-path="koneksi-x" href="#"><span class="material-symbols-outlined text-[18px]">link</span><span>Koneksi X</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-ink-700 hover:bg-surface-sunken hover:text-ink-900 transition-colors font-body-sm" data-path="kamus-alias" href="#"><span class="material-symbols-outlined text-[18px]">spellcheck</span><span>Kamus alias</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-ink-700 hover:bg-surface-sunken hover:text-ink-900 transition-colors font-body-sm" data-path="pengguna" href="#"><span class="material-symbols-outlined text-[18px]">manage_accounts</span><span>Pengguna</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-ink-700 hover:bg-surface-sunken hover:text-ink-900 transition-colors font-body-sm" data-path="audit-log" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span>Audit log</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm"><div class="rounded-[20px] p-3 text-white shadow-sm" style="background: linear-gradient(165deg, #1B45C2, #10245F);"><div class="flex items-center justify-between pb-2 mb-2 border-b border-white/10"><span class="font-label-xs-bold text-white text-[11px] tracking-wide uppercase">Kesegaran Data</span><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span></div><ul class="space-y-1.5 font-label-xs text-white/90 text-[11px]"><li class="flex items-center justify-between"><span>Berita</span><div class="flex items-center gap-1"><span class="text-white/70">4 mnt lalu</span><span class="material-symbols-outlined text-emerald-300 text-[14px]">check_circle</span></div></li><li class="flex items-center justify-between"><span>X</span><div class="flex items-center gap-1"><span class="text-amber-200 font-medium">1j 2 mnt lalu</span><span class="material-symbols-outlined text-amber-300 text-[14px]">schedule</span></div></li><li class="flex items-center justify-between"><span>Instagram</span><div class="flex items-center gap-1"><span class="text-white/70">22 mnt lalu</span><span class="material-symbols-outlined text-emerald-300 text-[14px]">check_circle</span></div></li><li class="flex items-center justify-between"><span>Threads</span><div class="flex items-center gap-1"><span class="text-white/70">18 mnt lalu</span><span class="material-symbols-outlined text-emerald-300 text-[14px]">check_circle</span></div></li></ul><a class="inline-flex items-center gap-1 mt-2.5 pt-2 border-t border-white/10 text-[11px] font-label-xs-bold text-primary-fixed hover:text-white transition-colors" data-path="status-sistem" href="#"><span>Lihat detail</span><span class="text-xs">→</span></a></div><nav class="px-space-xs" data-active-classes="bg-surface-sunken text-primary-600 font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-ink-600 hover:text-ink-900 transition-colors font-body-sm" data-path="cara-membaca-data" href="#"><span class="material-symbols-outlined text-[18px]">help_outline</span><span>Cara membaca data</span></a></nav></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-16 bg-surface border-b border-border-subtle z-40 px-space-lg flex items-center justify-between"><div class="flex items-center"><div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-[#FFF3DC] text-[#8F5200] border border-[#F4E1BA] font-label-xs font-medium"><span class="material-symbols-outlined text-[#B26A00] text-[16px]">warning</span><span>1 sumber terlambat (X)</span></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifikasi Admin" class="relative p-2 rounded-lg text-ink-600 hover:bg-surface-sunken hover:text-ink-900 transition-colors" type="button"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'wght' 300;">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-neg ring-2 ring-surface"></span></button><div class="h-5 w-[1px] bg-border-subtle"></div><div class="relative flex items-center gap-space-sm cursor-pointer group"><div class="w-8 h-8 rounded-full bg-primary-600 flex items-center justify-center text-on-primary font-label-xs-bold text-[13px]">AS</div><div class="flex flex-col text-left"><span class="font-body-sm text-ink-900 leading-none">Admin Sektor</span><span class="font-label-xs text-ink-500 leading-tight">Super Admin</span></div><span class="material-symbols-outlined text-ink-500 text-[18px] group-hover:text-ink-900 transition-transform group-hover:translate-y-0.5">expand_more</span></div></div></header><main class="relative pt-16 min-h-screen bg-canvas"><div class="flex flex-col w-full">
+<div class="px-8 py-7 flex flex-col gap-5 max-w-[1440px] mx-auto w-full">
+<!-- Top Admin Header -->
+<header class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex flex-col">
+<h1 class="font-headline-xl text-headline-xl text-ink-900 tracking-tight">Status sistem</h1>
+<p class="font-body-sm text-body-sm text-ink-600 mt-1">
+          Kesehatan saluran pengumpulan konten, eksekusi pipeline berkala, dan beban pemrosesan leksikon.
+        </p>
+</div>
+<div class="flex items-center gap-3">
+<button class="inline-flex items-center justify-center gap-2 px-[18px] py-[10px] rounded-[10px] bg-primary-600 hover:bg-primary-700 text-surface font-body-base-medium text-body-base-medium shadow-sm transition-all duration-150 active:scale-[0.99] cursor-pointer" id="btn-retry-all" type="button">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'wght' 300;">autorenew</span>
+<span>Jalankan ulang job gagal</span>
+</button>
+</div>
+</header>
+<!-- (1) Error Alert Banner -->
+<section aria-label="Pemberitahuan Galat Sistem" class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-5 py-3.5 rounded-[14px] bg-neg-tint border border-neg/20">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface flex items-center justify-center shrink-0 text-neg-text shadow-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'wght' 400;">warning</span>
+</div>
+<p class="font-body-base-medium text-body-base-medium font-semibold text-neg-text truncate">
+          Sesi X tidak valid sejak 09:10 WIB. Data X tidak diperbarui.
+        </p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-[10px] bg-surface border border-neg/30 hover:bg-neg-tint text-neg-text font-body-sm text-body-sm font-semibold transition-colors duration-150 shadow-sm cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[16px]">vpn_key_alert</span>
+<span>Perbarui sesi</span>
+</button>
+</div>
+</section>
+<!-- (2) Job Terjadwal Card & Data Grid Table -->
+<section class="bg-surface rounded-[20px] border border-border-subtle p-5 shadow-sm flex flex-col">
+<!-- Toolbar Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4">
+<div class="flex items-center gap-2.5">
+<h2 class="font-title-md text-body-base-medium font-semibold text-ink-900">Job terjadwal</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-sunken text-ink-600 font-label-xs text-label-xs">
+            4 pipeline otomatis
+          </span>
+</div>
+<div class="flex items-center gap-2 text-ink-500 font-label-xs text-label-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>Pemeriksaan sinkronisasi: 09:41 WIB</span>
+</div>
+</div>
+<!-- Data Table Frame -->
+<div class="overflow-x-auto rounded-xl border border-border-subtle">
+<table class="w-full text-left border-collapse min-w-[760px]">
+<thead>
+<tr class="bg-surface-sunken h-11 border-b border-border-subtle font-label-xs-bold text-label-xs text-ink-600">
+<th class="px-4 py-2 font-semibold" scope="col">Job</th>
+<th class="px-4 py-2 font-semibold" scope="col">Jadwal</th>
+<th class="px-4 py-2 font-semibold" scope="col">Run terakhir</th>
+<th class="px-4 py-2 font-semibold" scope="col">Status</th>
+<th class="px-4 py-2 font-semibold" scope="col">Durasi</th>
+<th class="px-4 py-2 font-semibold" scope="col">Diproses</th>
+<th class="px-4 py-2 font-semibold" scope="col">Error</th>
+</tr>
+</thead>
+<tbody class="font-body-base text-body-base text-ink-700 divide-y divide-border-subtle">
+<!-- Row 1: Ambil RSS -->
+<tr class="h-[52px] hover:bg-surface-sunken/60 transition-colors">
+<td class="px-4 py-2 font-body-base-medium font-semibold text-ink-900">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-ink-500">rss_feed</span>
+<span>Ambil RSS</span>
+</div>
+</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-600">10–15 m</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-900">09:40 WIB</td>
+<td class="px-4 py-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#E5F6EC] text-[#0B7A47] font-label-xs-bold text-label-xs">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Sukses</span>
+</span>
+</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-600">14 dtk</td>
+<td class="px-4 py-2 font-body-sm text-body-sm font-semibold text-ink-900">86</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-500">–</td>
+</tr>
+<!-- Row 2: Analisis batch -->
+<tr class="h-[52px] hover:bg-surface-sunken/60 transition-colors">
+<td class="px-4 py-2 font-body-base-medium font-semibold text-ink-900">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-ink-500">memory</span>
+<span>Analisis batch</span>
+</div>
+</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-600">5 m</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-900">09:40 WIB</td>
+<td class="px-4 py-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#E5F6EC] text-[#0B7A47] font-label-xs-bold text-label-xs">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Sukses</span>
+</span>
+</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-600">41 dtk</td>
+<td class="px-4 py-2 font-body-sm text-body-sm font-semibold text-ink-900">100</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-500">–</td>
+</tr>
+<!-- Row 3: Ambil sosmed (GAGAL / Tint Merah Muda Lengkap) -->
+<tr class="h-[52px] bg-neg-tint text-neg-text font-body-base border-t border-b border-neg/20">
+<td class="px-4 py-2 font-body-base-medium font-bold text-neg-text">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-neg">share</span>
+<span>Ambil sosmed</span>
+</div>
+</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-neg-text/90">15–30 m</td>
+<td class="px-4 py-2 font-body-sm text-body-sm font-medium text-neg-text">09:10 WIB</td>
+<td class="px-4 py-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface text-neg-text border border-neg/30 font-label-xs-bold text-label-xs">
+<span class="material-symbols-outlined text-[14px] text-neg">warning</span>
+<span>Gagal</span>
+</span>
+</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-neg-text/90">3 dtk</td>
+<td class="px-4 py-2 font-body-sm text-body-sm font-semibold text-neg-text">0</td>
+<td class="px-4 py-2">
+<button class="inline-flex items-center gap-0.5 text-primary-600 hover:text-primary-700 font-label-xs-bold text-label-xs underline underline-offset-2 cursor-pointer" onclick="toggleErrorDetail()" type="button">
+<span>Lihat ▾</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 Expansion Detail (Hidden by default, interactive) -->
+<tr class="hidden bg-surface border-b border-border-subtle" id="error-trace-row">
+<td class="px-5 py-3" colspan="7">
+<div class="p-3 rounded-lg bg-surface-sunken border border-border-subtle flex flex-col gap-1.5 font-label-xs text-label-xs">
+<div class="flex items-center justify-between text-ink-700 font-semibold">
+<span class="flex items-center gap-1.5 text-neg-text">
+<span class="material-symbols-outlined text-[16px]">report_problem</span>
+                      AuthExpiredException: Bearer credential cookie kedaluwarsa pada node worker-id-02
+                    </span>
+<span class="text-ink-500 font-mono">TraceID: #X-9011-AUTH</span>
+</div>
+<div class="text-ink-600 font-mono text-[11px] bg-surface p-2 rounded border border-border-subtle overflow-x-auto">
+                    HTTP 401 Unauthorized :: POST https://api.x.com/2/tweets/search/stream :: Sesi kedaluwarsa sejak 09:10 WIB
+                  </div>
+</div>
+</td>
+</tr>
+<!-- Row 4: Pemeliharaan -->
+<tr class="h-[52px] hover:bg-surface-sunken/60 transition-colors">
+<td class="px-4 py-2 font-body-base-medium font-semibold text-ink-900">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-ink-500">build_circle</span>
+<span>Pemeliharaan</span>
+</div>
+</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-600">Harian</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-900">02:00 WIB</td>
+<td class="px-4 py-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#E5F6EC] text-[#0B7A47] font-label-xs-bold text-label-xs">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Sukses</span>
+</span>
+</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-600">8 dtk</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-500">–</td>
+<td class="px-4 py-2 font-body-sm text-body-sm text-ink-500">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-4 mt-1 border-t border-border-subtle font-body-sm text-body-sm text-ink-600">
+<div>
+          Menampilkan <span class="font-semibold text-ink-900">4</span> dari <span class="font-semibold text-ink-900">4</span> job
+        </div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<label class="font-label-xs text-label-xs text-ink-500" for="per-page-select">Baris:</label>
+<div class="relative">
+<select class="appearance-none bg-surface border border-border-subtle rounded-lg px-2.5 py-1 pr-7 text-ink-900 font-body-sm text-body-sm hover:border-border-control focus:outline-none focus:ring-2 focus:ring-primary-600 cursor-pointer" id="per-page-select">
+<option selected="" value="25">25 per halaman</option>
+<option value="50">50 per halaman</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1.5 text-ink-500 text-[18px] pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1">
+<button aria-label="Halaman sebelumnya" class="w-8 h-8 rounded-lg flex items-center justify-center text-ink-500/40 bg-surface-sunken cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-xs-bold text-label-xs">
+              1
+            </span>
+<button aria-label="Halaman berikutnya" class="w-8 h-8 rounded-lg flex items-center justify-center text-ink-500/40 bg-surface-sunken cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- (3) Dual Card Grid: 6 Columns + 6 Columns -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+<!-- Kartu Kiri: Status analisis -->
+<section class="bg-surface rounded-[20px] border border-border-subtle p-5 shadow-sm flex flex-col justify-between">
+<div>
+<!-- Title & Live Pill -->
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-body-base-medium font-semibold text-ink-900">Status analisis</h2>
+<span class="material-symbols-outlined text-ink-500 text-[16px]">info</span>
+</div>
+<span class="font-label-xs text-label-xs text-ink-500">Pipeline Leksikon</span>
+</div>
+<!-- Stacked Horizontal Bar -->
+<div class="mt-2">
+<div class="flex h-3 w-full rounded-[6px] overflow-hidden bg-surface-sunken" title="Distribusi Status Analisis">
+<!-- Selesai (98.9%) -->
+<div class="bg-[#1FA463] h-full transition-all duration-300" style="width: 98.88%; border-right: 2px solid #ffffff;" title="Selesai: 12.340"></div>
+<!-- Diproses (0.1%) -->
+<div class="bg-[#2457E6] h-full transition-all duration-300" style="width: 0.10%; border-right: 2px solid #ffffff;" title="Diproses: 12"></div>
+<!-- Menunggu (0.8%) -->
+<div class="bg-[#8A94A8] h-full transition-all duration-300" style="width: 0.77%; border-right: 2px solid #ffffff;" title="Menunggu: 96"></div>
+<!-- Gagal (0.25%) -->
+<div class="bg-[#E5484D] h-full transition-all duration-300" style="width: 0.25%;" title="Gagal: 32"></div>
+</div>
+</div>
+<!-- Metrics Row -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-xs text-label-xs text-ink-500">
+<span class="w-2.5 h-2.5 rounded-full bg-[#1FA463] shrink-0"></span>
+<span>Selesai</span>
+</div>
+<span class="font-title-md text-body-base-medium font-bold text-ink-900 mt-1">12.340</span>
+<span class="font-label-xs text-[11px] text-ink-500">98,9%</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-xs text-label-xs text-ink-500">
+<span class="w-2.5 h-2.5 rounded-full bg-[#2457E6] shrink-0"></span>
+<span>Diproses</span>
+</div>
+<span class="font-title-md text-body-base-medium font-bold text-ink-900 mt-1">12</span>
+<span class="font-label-xs text-[11px] text-ink-500">0,1%</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-xs text-label-xs text-ink-500">
+<span class="w-2.5 h-2.5 rounded-full bg-[#8A94A8] shrink-0"></span>
+<span>Menunggu</span>
+</div>
+<span class="font-title-md text-body-base-medium font-bold text-ink-900 mt-1">96</span>
+<span class="font-label-xs text-[11px] text-ink-500">0,8%</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-xs text-label-xs text-ink-500">
+<span class="w-2.5 h-2.5 rounded-full bg-[#E5484D] shrink-0"></span>
+<span>Gagal</span>
+</div>
+<a class="inline-flex items-center gap-1 text-neg-text font-title-md text-body-base-medium font-bold hover:underline decoration-dashed mt-1 group" href="#">
+<span>32</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+</a>
+<span class="font-label-xs text-[11px] text-neg-text font-medium">32 artikel</span>
+</div>
+</div>
+</div>
+<!-- Footer Info Note -->
+<div class="pt-4 mt-4 border-t border-border-subtle flex items-center justify-between">
+<p class="font-label-xs text-label-xs text-ink-500">
+            Total 12.480 artikel dalam antrean dan arsip leksikon aktif.
+          </p>
+<span class="font-label-xs text-[11px] text-ink-500 font-mono">Penyegaran 5m</span>
+</div>
+</section>
+<!-- Kartu Kanan: Sumber bermasalah -->
+<section class="bg-surface rounded-[20px] border border-border-subtle p-5 shadow-sm flex flex-col justify-between">
+<div>
+<!-- Title & Badges -->
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-body-base-medium font-semibold text-ink-900">Sumber bermasalah</h2>
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-neg-tint text-neg-text font-label-xs-bold text-[11px]">
+                2
+              </span>
+</div>
+<span class="font-label-xs text-label-xs text-ink-500">Uptime: 96,2%</span>
+</div>
+<!-- Problem Sources List -->
+<div class="space-y-2.5 mt-2">
+<!-- Item 1: Detik -->
+<div class="p-3 rounded-xl bg-surface-sunken border border-border-subtle flex items-center justify-between gap-3 hover:bg-surface-sunken/80 transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface border border-border-subtle flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">code_off</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-base-medium text-body-base-medium font-semibold text-ink-900 truncate">Detik</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full bg-surface border border-border-subtle text-ink-600 font-label-xs text-[10px]">
+                      Berita
+                    </span>
+</div>
+<div class="flex items-center gap-1.5 text-neg-text font-label-xs text-label-xs mt-0.5">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>XML rusak</span>
+<span class="text-ink-500">· 09:30 WIB</span>
+</div>
+</div>
+</div>
+<button class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-surface border border-border-subtle hover:bg-surface-sunken text-primary-600 font-body-sm text-body-sm font-semibold transition-colors shrink-0 cursor-pointer" type="button">
+<span>Periksa feed</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Item 2: Kumparan -->
+<div class="p-3 rounded-xl bg-surface-sunken border border-border-subtle flex items-center justify-between gap-3 hover:bg-surface-sunken/80 transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface border border-border-subtle flex items-center justify-center shrink-0 text-amber-700">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-base-medium text-body-base-medium font-semibold text-ink-900 truncate">Kumparan</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full bg-surface border border-border-subtle text-ink-600 font-label-xs text-[10px]">
+                      Berita
+                    </span>
+</div>
+<div class="flex items-center gap-1.5 text-amber-800 font-label-xs text-label-xs mt-0.5">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span>
+<span>Timeout (&gt;15s)</span>
+<span class="text-ink-500">· 09:30 WIB</span>
+</div>
+</div>
+</div>
+<button class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-surface border border-border-subtle hover:bg-surface-sunken text-primary-600 font-body-sm text-body-sm font-semibold transition-colors shrink-0 cursor-pointer" type="button">
+<span>Periksa feed</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer Info Note -->
+<div class="pt-4 mt-4 border-t border-border-subtle flex items-center justify-between">
+<p class="font-label-xs text-label-xs text-ink-500">
+            Pencatatan galat otomatis dari pengambil RSS 24 jam terakhir.
+          </p>
+<a class="font-label-xs-bold text-label-xs text-primary-600 hover:text-primary-700 transition-colors" href="#">
+            Lihat semua log →
+          </a>
+</div>
+</section>
+</div>
+</div>
+<script>
+    function toggleErrorDetail() {
+      var row = document.getElementById('error-trace-row');
+      if (row) {
+        row.classList.toggle('hidden');
+      }
+    }
+
+    document.getElementById('btn-retry-all')?.addEventListener('click', function() {
+      var btn = this;
+      var icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.classList.add('animate-spin');
+      }
+      btn.setAttribute('disabled', 'true');
+      btn.style.opacity = '0.7';
+
+      setTimeout(function() {
+        if (icon) {
+          icon.classList.remove('animate-spin');
+        }
+        btn.removeAttribute('disabled');
+        btn.style.opacity = '1';
+      }, 1400);
+    });
+  </script>
+</div></main></div></body></html>

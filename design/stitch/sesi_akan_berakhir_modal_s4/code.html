@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-surface": "#131b2d",
+          "primary-700": "#1B45C2",
+          "error-container": "#ffdad6",
+          "ink-700": "#3B4559",
+          "surface-container-high": "#e1e8ff",
+          "border-subtle": "#E6E9F0",
+          "border-control": "#8C95A8",
+          "on-primary-container": "#dce1ff",
+          "surface": "#FFFFFF",
+          "on-background": "#131b2d",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary": "#ffffff",
+          "surface-bright": "#faf8ff",
+          "error": "#ba1a1a",
+          "surface-tint": "#1850df",
+          "inverse-surface": "#283043",
+          "tertiary-container": "#b33d00",
+          "surface-dim": "#d2d9f3",
+          "on-primary-fixed": "#001551",
+          "on-tertiary-fixed": "#380d00",
+          "secondary-fixed-dim": "#bcc6df",
+          "ink-500": "#6B7488",
+          "surface-container-low": "#f2f3ff",
+          "on-surface-variant": "#434655",
+          "on-primary-fixed-variant": "#0039b3",
+          "surface-variant": "#dbe2fb",
+          "canvas": "#F3F5F9",
+          "surface-container": "#e9edff",
+          "on-secondary-container": "#5a647a",
+          "secondary-container": "#d8e2fc",
+          "neg": "#E5484D",
+          "tertiary": "#8b2d00",
+          "primary-600": "#2457E6",
+          "on-secondary-fixed-variant": "#3d475b",
+          "on-secondary-fixed": "#111c2e",
+          "ink-900": "#0F1729",
+          "on-tertiary": "#ffffff",
+          "neg-tint": "#FDECEC",
+          "inverse-on-surface": "#edf0ff",
+          "outline": "#747686",
+          "on-tertiary-container": "#ffdbcf",
+          "primary-container": "#2457e6",
+          "on-error": "#ffffff",
+          "secondary-fixed": "#d8e2fc",
+          "ink-600": "#566075",
+          "surface-sunken": "#F7F8FB",
+          "on-tertiary-fixed-variant": "#802900",
+          "surface-container-highest": "#dbe2fb",
+          "primary": "#003ec1",
+          "on-error-container": "#93000a",
+          "on-primary": "#ffffff",
+          "tertiary-fixed-dim": "#ffb59a",
+          "neg-text": "#C2262E",
+          "background": "#faf8ff",
+          "primary-fixed": "#dce1ff",
+          "tertiary-fixed": "#ffdbcf",
+          "primary-fixed-dim": "#b7c4ff",
+          "secondary": "#545f74",
+          "inverse-primary": "#b7c4ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "margin-desktop": "2rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1rem",
+          "gutter": "1rem",
+          "margin": "1rem",
+          "gutter-desktop": "1.5rem",
+          "space-md": "0.75rem",
+          "space-xl": "1.5rem"
+        },
+        "fontFamily": {
+          "headline-xl": ["Manrope"],
+          "body-sm": ["Manrope"],
+          "body-base-medium": ["Manrope"],
+          "title-md": ["Manrope"],
+          "label-xs": ["Manrope"],
+          "headline-xl-mobile": ["Manrope"],
+          "body-base": ["Manrope"],
+          "label-xs-bold": ["Manrope"]
+        },
+        "fontSize": {
+          "headline-xl": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+          "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "500"}],
+          "body-base-medium": ["14px", {"lineHeight": "22px", "letterSpacing": "0", "fontWeight": "500"}],
+          "title-md": ["18px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "label-xs": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+          "headline-xl-mobile": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+          "body-base": ["14px", {"lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400"}],
+          "label-xs-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "700"}]
+        }
+      }
+    }
+  }</script></head><body class="bg-canvas font-body-base text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface border-r border-border-subtle z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-border-subtle"><div class="w-8 h-8 rounded bg-primary-600 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">radar</span></div><div class="flex flex-col min-w-0 leading-tight"><span class="font-title-md text-title-md text-ink-900 tracking-tight font-bold truncate">Pantau Media</span><span class="font-label-xs-bold text-label-xs-bold text-primary-600 tracking-wider uppercase">PLATFORM OSINT</span></div></div><div class="px-space-md py-space-md"><div class="px-space-sm py-space-xs mb-space-xs"><span class="font-label-xs-bold text-label-xs-bold uppercase text-ink-500 tracking-wider">Pimpinan</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-600 text-on-primary font-bold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded transition-colors bg-primary-600 text-on-primary font-bold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-ink-700 hover:bg-surface-sunken hover:text-ink-900 transition-colors font-body-sm text-body-sm" data-path="jejaring-aktor" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span>Jejaring Aktor</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm"><div class="rounded-lg p-space-md text-on-primary shadow-sm flex flex-col gap-space-sm" style="background: linear-gradient(165deg, #1B45C2 0%, #10245F 100%);"><div class="flex items-center justify-between"><span class="font-label-xs-bold text-label-xs-bold uppercase tracking-wider text-surface">Kesegaran Data</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-fixed opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-surface"></span></span></div><div class="flex flex-col gap-space-xs font-label-xs text-label-xs"><div class="flex items-center justify-between"><span class="text-surface/80">Berita</span><span class="font-label-xs-bold text-label-xs-bold text-surface">Aktif</span></div><div class="flex items-center justify-between"><span class="text-surface/80">X (Twitter)</span><span class="font-label-xs-bold text-label-xs-bold text-tertiary-fixed">Terlambat</span></div><div class="flex items-center justify-between"><span class="text-surface/80">Instagram</span><span class="font-label-xs-bold text-label-xs-bold text-surface">Aktif</span></div><div class="flex items-center justify-between"><span class="text-surface/80">Threads</span><span class="font-label-xs-bold text-label-xs-bold text-surface">Aktif</span></div></div></div><a class="flex items-center gap-space-xs text-ink-600 hover:text-primary-600 font-label-xs text-label-xs transition-colors px-space-xs" data-path="panduan-data" href="#"><span class="material-symbols-outlined text-[16px]">info</span><span>Cara membaca data</span></a></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-16 bg-surface border-b border-border-subtle z-40 flex items-center justify-between px-space-lg"><div class="flex items-center"><div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-sunken border border-border-subtle"><span class="h-2 w-2 rounded-full bg-primary-600"></span><span class="font-label-xs text-label-xs text-ink-700">Semua sumber terkini · diperbarui 09:42 WIB</span></div></div><div class="flex items-center gap-space-md"><div class="flex flex-col text-right leading-tight"><span class="font-body-sm text-body-sm text-ink-900 font-bold">Admin Sektor</span><span class="font-label-xs text-label-xs text-ink-500">Pimpinan Instansi</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 min-h-screen bg-canvas"><div class="flex flex-col w-full relative">
+<!-- DASHBOARD CONTENT (Active Executive Monitor Behind Modal) -->
+<div aria-hidden="true" class="w-full p-space-lg md:p-space-xl flex flex-col gap-space-xl opacity-40 blur-[1px] pointer-events-none select-none transition-all duration-300">
+<!-- Dashboard Top Bar / Filter Summary -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-xs-bold text-label-xs-bold uppercase tracking-wider text-primary-600">Ringkasan Eksekutif</span>
+<span class="w-1.5 h-1.5 rounded-full bg-ink-500"></span>
+<span class="font-label-xs text-label-xs text-ink-500">Siklus 24 Jam Terakhir</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-ink-900 tracking-tight">Sentimen Isu Strategis Nasional</h1>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface px-space-md py-space-xs rounded-xl shadow-sm text-ink-700">
+<span class="material-symbols-outlined text-[18px] text-ink-500">calendar_today</span>
+<span class="font-body-sm text-body-sm">Hari ini, 24 Okt 2025</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface px-space-md py-space-xs rounded-xl shadow-sm text-ink-700">
+<span class="material-symbols-outlined text-[18px] text-primary-600">verified</span>
+<span class="font-body-sm text-body-sm font-semibold">Semua Sektor Terpantau</span>
+</div>
+</div>
+</div>
+<!-- KPI Metric Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface rounded-xl p-space-lg shadow-sm flex flex-col justify-between min-h-[140px]">
+<div class="flex items-center justify-between">
+<span class="font-label-xs-bold text-label-xs-bold uppercase text-ink-500 tracking-wider">Total Sebutan (Mentions)</span>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary-600">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">148.920</span>
+<span class="font-label-xs-bold text-label-xs-bold text-primary-600 flex items-center">+14,2%</span>
+</div>
+<span class="font-label-xs text-label-xs text-ink-500 mt-space-xs block">Volume agregat 4 kanal utama</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface rounded-xl p-space-lg shadow-sm flex flex-col justify-between min-h-[140px]">
+<div class="flex items-center justify-between">
+<span class="font-label-xs-bold text-label-xs-bold uppercase text-ink-500 tracking-wider">Indeks Sentimen Bersih</span>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary-600">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">+62,4</span>
+<span class="font-label-xs-bold text-label-xs-bold text-primary-600 flex items-center">Stabil</span>
+</div>
+<span class="font-label-xs text-label-xs text-ink-500 mt-space-xs block">Skala -100 s/d +100</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface rounded-xl p-space-lg shadow-sm flex flex-col justify-between min-h-[140px]">
+<div class="flex items-center justify-between">
+<span class="font-label-xs-bold text-label-xs-bold uppercase text-ink-500 tracking-wider">Potensi Eskalasi Negatif</span>
+<div class="w-8 h-8 rounded-full bg-neg-tint flex items-center justify-center text-neg-text">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-neg-text font-bold">4 Isu</span>
+<span class="font-label-xs-bold text-label-xs-bold text-neg-text flex items-center">Waspada</span>
+</div>
+<span class="font-label-xs text-label-xs text-ink-500 mt-space-xs block">Membutuhkan klarifikasi cepat</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface rounded-xl p-space-lg shadow-sm flex flex-col justify-between min-h-[140px]">
+<div class="flex items-center justify-between">
+<span class="font-label-xs-bold text-label-xs-bold uppercase text-ink-500 tracking-wider">Jangkauan Audiens (Reach)</span>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary-600">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">12,8 Jt</span>
+<span class="font-label-xs-bold text-label-xs-bold text-primary-600 flex items-center">+6,8%</span>
+</div>
+<span class="font-label-xs text-label-xs text-ink-500 mt-space-xs block">Estimasi paparan publik unik</span>
+</div>
+</div>
+</div>
+<!-- Main Analytics Panels Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Panel: Sentiment Gauge & Distribution -->
+<div class="lg:col-span-4 bg-surface rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-ink-900">Distribusi Sentimen</h2>
+<p class="font-label-xs text-label-xs text-ink-500">Klasifikasi otomatis model analitik NLP</p>
+</div>
+<span class="material-symbols-outlined text-ink-500 text-[20px]">tune</span>
+</div>
+<!-- SVG Gauge Representation -->
+<div class="flex flex-col items-center justify-center py-space-sm relative">
+<svg class="w-48 h-28 overflow-visible" viewbox="0 0 200 110">
+<!-- Background arc -->
+<path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#E6E9F0" stroke-linecap="round" stroke-width="16"></path>
+<!-- Positive segment -->
+<path d="M 20 100 A 80 80 0 0 1 110 22" fill="none" stroke="#2457E6" stroke-linecap="round" stroke-width="16"></path>
+<!-- Negative highlight -->
+<path d="M 140 38 A 80 80 0 0 1 180 100" fill="none" stroke="#E5484D" stroke-linecap="round" stroke-width="16"></path>
+</svg>
+<div class="text-center -mt-6">
+<span class="font-headline-xl text-headline-xl text-ink-900 font-bold">68%</span>
+<span class="block font-label-xs-bold text-label-xs-bold uppercase text-primary-600">Positif Kondusif</span>
+</div>
+</div>
+<!-- Sentiment Legend Progress Rows -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between font-label-xs text-label-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-600"></span>
+<span class="text-ink-700">Positif</span>
+</div>
+<span class="font-label-xs-bold text-ink-900">68% (101.265)</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-primary-600 h-full rounded-full" style="width: 68%"></div>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-border-control"></span>
+<span class="text-ink-700">Netral</span>
+</div>
+<span class="font-label-xs-bold text-ink-900">22% (32.760)</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-border-control h-full rounded-full" style="width: 22%"></div>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-neg"></span>
+<span class="text-ink-700">Negatif / Kritis</span>
+</div>
+<span class="font-label-xs-bold text-neg-text">10% (14.895)</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-neg h-full rounded-full" style="width: 10%"></div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Hourly Trend Sparkline & Feed Preview -->
+<div class="lg:col-span-8 bg-surface rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-ink-900">Tren Volume Percakapan 24 Jam</h2>
+<p class="font-label-xs text-label-xs text-ink-500">Lonjakan terpantau pada kluster topik regulasi ketenagakerjaan</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-sunken p-1 rounded-lg">
+<span class="px-space-xs py-0.5 rounded bg-surface font-label-xs-bold text-ink-900 shadow-sm">Per Jam</span>
+<span class="px-space-xs py-0.5 font-label-xs text-ink-500">Harian</span>
+</div>
+</div>
+<!-- Trend Line SVG Chart -->
+<div class="w-full h-44 flex items-end pt-space-md">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 600 120">
+<defs>
+<lineargradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#2457E6" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#2457E6" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 0,90 Q 50,85 100,70 T 200,60 T 300,25 T 400,45 T 500,30 T 600,15 L 600,120 L 0,120 Z" fill="url(#areaGradient)"></path>
+<path d="M 0,90 Q 50,85 100,70 T 200,60 T 300,25 T 400,45 T 500,30 T 600,15" fill="none" stroke="#2457E6" stroke-linecap="round" stroke-width="2.5"></path>
+<circle cx="300" cy="25" fill="#2457E6" r="4"></circle>
+<circle cx="600" cy="15" fill="#2457E6" r="4"></circle>
+</svg>
+</div>
+<!-- Recent Activity Feed Rows -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-sunken">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2 h-2 rounded-full bg-primary-600 shrink-0"></span>
+<span class="font-body-sm text-body-sm text-ink-900 font-semibold truncate">Portal Berita Nasional: Pernyataan resmi menteri terkait penyerapan tenaga kerja</span>
+</div>
+<span class="font-label-xs text-label-xs text-ink-500 shrink-0 ml-space-sm">2 mnt lalu</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-sunken">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2 h-2 rounded-full bg-neg shrink-0"></span>
+<span class="font-body-sm text-body-sm text-ink-900 font-semibold truncate">X (Twitter): Tagar keluhan layanan perizinan terverifikasi naik peringkat 4</span>
+</div>
+<span class="font-label-xs text-label-xs text-ink-500 shrink-0 ml-space-sm">7 mnt lalu</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SCRIM OVERLAY (rgb(15 23 41 / 40%)) -->
+<div class="fixed inset-0 top-0 left-0 w-screen h-screen z-50 flex items-center justify-center p-4" style="background-color: rgba(15, 23, 41, 0.40); backdrop-filter: blur(2px);">
+<!-- MODAL CONFIRMATION DIALOG -->
+<div aria-describedby="session-modal-desc" aria-labelledby="session-modal-title" aria-modal="true" class="w-full max-w-[460px] bg-surface relative flex flex-col text-left transition-all duration-200" role="alertdialog" style="border-radius: 28px; box-shadow: 0 24px 64px -16px rgba(15, 23, 41, 0.30); padding: 36px; border: 1px solid #E6E9F0;">
+<!-- Close Button (Round ✕) -->
+<button aria-label="Tutup dialog peringatan sesi" class="absolute top-5 right-5 w-8 h-8 rounded-full flex items-center justify-center text-ink-500 hover:text-ink-900 hover:bg-surface-sunken transition-colors focus:outline-none focus:ring-2 focus:ring-primary-600" id="btn-close-modal" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'wght' 500;">close</span>
+</button>
+<!-- Hourglass / Clock Icon Container -->
+<div class="w-[52px] h-[52px] rounded-full flex items-center justify-center shrink-0" style="background-color: #FFF3DC;">
+<span class="material-symbols-outlined text-[26px]" style="color: #9A5B00; font-variation-settings: 'wght' 200, 'opsz' 24;">hourglass_empty</span>
+</div>
+<!-- Modal Title -->
+<h2 class="font-title-md" id="session-modal-title" style="font-size: 22px; line-height: 28px; font-weight: 700; color: #0F1729; letter-spacing: -0.01em; margin-top: 16px; margin-bottom: 8px;">
+        Sesi akan berakhir
+      </h2>
+<!-- Description & Tabular Countdown -->
+<div class="flex flex-col" id="session-modal-desc">
+<p class="font-body-base-medium" style="font-size: 15px; line-height: 22px; color: #131B2D; margin-bottom: 6px;">
+          Sesi Anda berakhir dalam <span class="font-bold tabular-nums" id="session-timer" style="color: #9A5B00;">02:00</span>.
+        </p>
+<p class="font-body-sm" style="font-size: 13px; line-height: 20px; color: #566075; margin-bottom: 28px;">
+          Untuk menjaga keamanan data pemantauan instansi, sesi yang tidak aktif akan ditutup secara otomatis. Simpan atau perpanjang sesi Anda sekarang untuk melanjutkan.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-3 mb-4">
+<!-- Secondary Action: Keluar sekarang -->
+<button class="w-full sm:w-auto inline-flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-ink-500 font-body-base-medium" id="btn-logout" onmouseout="this.style.backgroundColor='#FFFFFF'" onmouseover="this.style.backgroundColor='#F7F8FB'" style="background-color: #FFFFFF; border: 1px solid #E6E9F0; color: #0F1729; border-radius: 10px; padding: 10px 20px; font-weight: 600; font-size: 14px;" type="button">
+          Keluar sekarang
+        </button>
+<!-- Primary Action: Perpanjang sesi -->
+<button class="w-full sm:w-auto inline-flex items-center justify-center transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-700 font-body-base-medium" id="btn-extend" onmouseout="this.style.backgroundColor='#2457E6'" onmouseover="this.style.backgroundColor='#1B45C2'" style="background-color: #2457E6; color: #FFFFFF; border-radius: 10px; padding: 10px 24px; font-weight: 600; font-size: 14px; border: 1px solid transparent;" type="button">
+          Perpanjang sesi
+        </button>
+</div>
+<!-- Small Compliance Note -->
+<p class="text-center font-label-xs" style="font-size: 11px; line-height: 15px; color: #98A0B3;">
+        Sesuai standar kepatuhan batas waktu sesi WCAG 2.2.1.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  (function initSessionCountdown() {
+    let timeLeft = 120; // 02:00 in seconds
+    const timerDisplay = document.getElementById('session-timer');
+    const extendBtn = document.getElementById('btn-extend');
+    const closeBtn = document.getElementById('btn-close-modal');
+    const logoutBtn = document.getElementById('btn-logout');
+
+    const updateTimer = () => {
+      if (!timerDisplay) return;
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      timerDisplay.textContent = 
+        String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+      
+      if (timeLeft > 0) {
+        timeLeft--;
+      } else {
+        clearInterval(timerInterval);
+        timerDisplay.textContent = '00:00';
+      }
+    };
+
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    if (extendBtn) {
+      extendBtn.addEventListener('click', function() {
+        timeLeft = 120;
+        updateTimer();
+        extendBtn.textContent = 'Sesi Diperpanjang';
+        setTimeout(() => {
+          extendBtn.textContent = 'Perpanjang sesi';
+        }, 1500);
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        // Accessibility / preview dismiss feedback
+        const scrim = closeBtn.closest('.fixed');
+        if (scrim) {
+          scrim.style.opacity = '0';
+          setTimeout(() => {
+            scrim.style.display = 'none';
+          }, 200);
+        }
+      });
+    }
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', function() {
+        logoutBtn.textContent = 'Mengakhiri Sesi...';
+      });
+    }
+  })();
+</script></main></div></body></html>
